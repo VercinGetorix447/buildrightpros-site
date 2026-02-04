@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BuildRightPros - Professional contractor services, websites, leads, and AI-powered calling solutions" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body class="bg-bglight font-body text-gray-800">
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#hero" class="text-2xl font-heading font-bold text-primary">BuildRightPros</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+          <a href="#website" class="hover:text-primary transition">Website</a>
+          <a href="#leads" class="hover:text-primary transition">Leads</a>
+          <a href="#callers" class="hover:text-primary transition">Callers</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </div>
+        <a href="#contact" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">Get Started</a>
+      </div>
+    </nav>
+
+    <main class="pt-20">
+      <slot />
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>&copy; 2024 BuildRightPros. All rights reserved.</p>
+        <p class="text-gray-400 text-sm mt-2">admin@buildrightpros.com</p>
+      </div>
+    </footer>
+  </body>
+</html>
