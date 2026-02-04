@@ -19,13 +19,13 @@ const { title } = Astro.props;
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#hero" class="text-2xl font-heading font-bold text-primary">BuildRightPros</a>
+        <!-- NAV MENU - data-nav for easy reference -->
         <div class="hidden md:flex space-x-6">
-          <a href="#services" class="hover:text-primary transition">Services</a>
-          <a href="#pricing" class="hover:text-primary transition">Pricing</a>
-          <a href="#website" class="hover:text-primary transition">Website</a>
-          <a href="#leads" class="hover:text-primary transition">Leads</a>
-          <a href="#callers" class="hover:text-primary transition">Callers</a>
-          <a href="#contact" class="hover:text-primary transition">Contact</a>
+          <a href="#services" data-nav="1" class="hover:text-primary transition">Websites</a>
+          <a href="#leads" data-nav="2" class="hover:text-primary transition">Leads</a>
+          <a href="#callers" data-nav="3" class="hover:text-primary transition">Callers</a>
+          <a href="#pricing" data-nav="4" class="hover:text-primary transition">Pricing</a>
+          <a href="#contact" data-nav="5" class="hover:text-primary transition">Contact</a>
         </div>
         <a href="#contact" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">Get Started</a>
       </div>

@@ -5,290 +5,348 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="BuildRightPros - Grow Your Contracting Business">
 
   <!-- ============================================
-       SECTION 1: HERO
+       SECTION 1: HERO (Compact - 50vh)
        - 1.1 Headline
        - 1.2 Subheadline
        - 1.3 CTA Buttons
        ============================================ -->
-  <section id="hero" data-section="1" class="min-h-screen flex items-center bg-gradient-to-br from-primary to-blue-800 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-20 text-center">
-      <!-- 1.1 Headline -->
-      <h1 data-section="1.1" class="text-5xl md:text-6xl font-heading font-bold mb-6">Grow Your Contracting Business</h1>
-      <!-- 1.2 Subheadline -->
-      <p data-section="1.2" class="text-xl md:text-2xl mb-8 text-blue-100">Websites, Leads, and AI-Powered Calling Solutions for Plumbers, Electricians, HVAC, Roofers & More</p>
-      <!-- 1.3 CTA Buttons -->
-      <div data-section="1.3" class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#pricing" class="bg-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition">View Pricing</a>
-        <a href="#contact" class="border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition">Book a Call</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       SECTION 2: SERVICES
-       - 2.1 Section Title
-       - 2.2 Card: Websites
-       - 2.3 Card: Leads
-       - 2.4 Card: AI Callers
-       ============================================ -->
-  <section id="services" data-section="2" class="py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <!-- 2.1 Section Title -->
-      <h2 data-section="2.1" class="text-4xl font-heading font-bold text-center mb-12">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- 2.2 Card: Websites -->
-        <div data-section="2.2" class="bg-card p-8 rounded-xl shadow-lg">
-          <div class="text-4xl mb-4">🌐</div>
-          <h3 class="text-xl font-bold mb-3">Professional Websites</h3>
-          <p class="text-gray-600">Custom-built sites that convert visitors into customers. Mobile-optimized with SEO built-in.</p>
+  <section id="hero" data-section="1" class="h-[50vh] min-h-[400px] flex items-center bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <!-- 1.1 Headline -->
+          <h1 data-section="1.1" class="text-4xl md:text-5xl font-heading font-bold mb-4 text-gray-900">Grow Your Contracting Business</h1>
+          <!-- 1.2 Subheadline -->
+          <p data-section="1.2" class="text-lg md:text-xl mb-6 text-gray-600">Websites, Leads, and AI-Powered Calling Solutions for Plumbers, Electricians, HVAC, Roofers & More</p>
+          <!-- 1.3 CTA Buttons -->
+          <div data-section="1.3" class="flex flex-col sm:flex-row gap-3">
+            <a href="#pricing" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition text-center">View Pricing</a>
+            <a href="#contact" class="border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition text-center">Book a Call</a>
+          </div>
         </div>
-        <!-- 2.3 Card: Leads -->
-        <div data-section="2.3" class="bg-card p-8 rounded-xl shadow-lg">
-          <div class="text-4xl mb-4">📈</div>
-          <h3 class="text-xl font-bold mb-3">Lead Generation</h3>
-          <p class="text-gray-600">Targeted leads in your service area. Qualified prospects ready to hire contractors.</p>
-        </div>
-        <!-- 2.4 Card: AI Callers -->
-        <div data-section="2.4" class="bg-card p-8 rounded-xl shadow-lg">
-          <div class="text-4xl mb-4">📞</div>
-          <h3 class="text-xl font-bold mb-3">AI Callers</h3>
-          <p class="text-gray-600">24/7 AI-powered calling to follow up on leads, book appointments, and grow your business.</p>
+        <!-- 1.4 Hero Image -->
+        <div data-section="1.4" class="hidden md:block">
+          <div class="bg-white border border-gray-900 rounded-xl p-6 shadow-lg">
+            <div class="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
+              <p class="text-gray-400">[Hero Image - Dashboard Preview]</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       SECTION 3: PRICING
-       - 3.1 Section Title
-       - 3.2 Subtitle
-       - 3.3 Tier: Basic ($396)
-       - 3.4 Tier: Pro ($697)
-       - 3.5 Tier: Enterprise
-       - 3.6 Add-on Note
+       SECTION 2: WEBSITES (Text LEFT, Image RIGHT)
+       - 2.1 Label
+       - 2.2 Title
+       - 2.3 Description
+       - 2.4 Features List
+       - 2.5 Image
        ============================================ -->
-  <section id="pricing" data-section="3" class="py-20 bg-white">
+  <section id="services" data-section="2" class="py-20 bg-gray-100">
     <div class="max-w-6xl mx-auto px-4">
-      <!-- 3.1 Section Title -->
-      <h2 data-section="3.1" class="text-4xl font-heading font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-      <!-- 3.2 Subtitle -->
-      <p data-section="3.2" class="text-center text-gray-600 mb-12">No hidden fees. Cancel anytime.</p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- 3.3 Tier: Basic -->
-        <div data-section="3.3" class="bg-bglight p-8 rounded-xl border-2 border-gray-200">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Text Box LEFT -->
+        <div data-section="2.0" class="bg-white border border-gray-900 rounded-xl p-8">
+          <!-- 2.1 Label -->
+          <span data-section="2.1" class="text-sm font-semibold text-primary uppercase tracking-wide">Websites</span>
+          <!-- 2.2 Title -->
+          <h2 data-section="2.2" class="text-3xl font-heading font-bold mt-2 mb-4">Professional Sites That Convert</h2>
+          <!-- 2.3 Description -->
+          <p data-section="2.3" class="text-gray-600 mb-6">Custom-built websites designed specifically for contractors. Mobile-optimized, SEO-ready, and built to turn visitors into paying customers.</p>
+          <!-- 2.4 Features -->
+          <ul data-section="2.4" class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Trade-specific templates (plumber, HVAC, roofer, etc.)</li>
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Mobile-first responsive design</li>
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Built-in contact forms & booking</li>
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Lightning-fast load times</li>
+          </ul>
+        </div>
+        <!-- Image RIGHT -->
+        <div data-section="2.5" class="bg-white border border-gray-900 rounded-xl p-4">
+          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
+            <p class="text-gray-400">[Website Mockup Image]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 3: LEADS (Image LEFT, Text RIGHT)
+       - 3.1 Label
+       - 3.2 Title
+       - 3.3 Description
+       - 3.4 Stats
+       - 3.5 Image
+       ============================================ -->
+  <section id="leads" data-section="3" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Image LEFT -->
+        <div data-section="3.5" class="bg-white border border-gray-900 rounded-xl p-4 order-2 md:order-1">
+          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
+            <p class="text-gray-400">[Lead Generation Dashboard]</p>
+          </div>
+        </div>
+        <!-- Text Box RIGHT -->
+        <div data-section="3.0" class="bg-white border border-gray-900 rounded-xl p-8 order-1 md:order-2">
+          <!-- 3.1 Label -->
+          <span data-section="3.1" class="text-sm font-semibold text-secondary uppercase tracking-wide">Lead Generation</span>
+          <!-- 3.2 Title -->
+          <h2 data-section="3.2" class="text-3xl font-heading font-bold mt-2 mb-4">Qualified Leads Delivered Daily</h2>
+          <!-- 3.3 Description -->
+          <p data-section="3.3" class="text-gray-600 mb-6">Stop chasing cold calls. We find and qualify prospects in your service area who are actively looking for contractors like you.</p>
+          <!-- 3.4 Stats -->
+          <div data-section="3.4" class="grid grid-cols-2 gap-4">
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
+              <p class="text-2xl font-bold text-primary">500+</p>
+              <p class="text-sm text-gray-600">Leads Delivered</p>
+            </div>
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
+              <p class="text-2xl font-bold text-primary">89%</p>
+              <p class="text-sm text-gray-600">Contact Rate</p>
+            </div>
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
+              <p class="text-2xl font-bold text-primary">24hr</p>
+              <p class="text-sm text-gray-600">Delivery Time</p>
+            </div>
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
+              <p class="text-2xl font-bold text-primary">5x</p>
+              <p class="text-sm text-gray-600">Avg ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 4: AI CALLERS (Text LEFT, Image RIGHT)
+       - 4.1 Label
+       - 4.2 Title
+       - 4.3 Description
+       - 4.4 Features List
+       - 4.5 Image
+       ============================================ -->
+  <section id="callers" data-section="4" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Text Box LEFT -->
+        <div data-section="4.0" class="bg-white border border-gray-900 rounded-xl p-8">
+          <!-- 4.1 Label -->
+          <span data-section="4.1" class="text-sm font-semibold text-primary uppercase tracking-wide">AI Callers</span>
+          <!-- 4.2 Title -->
+          <h2 data-section="4.2" class="text-3xl font-heading font-bold mt-2 mb-4">Never Miss a Lead Again</h2>
+          <!-- 4.3 Description -->
+          <p data-section="4.3" class="text-gray-600 mb-6">Our AI-powered callers work 24/7 to follow up on leads, book appointments, and answer questions—so you can focus on the job.</p>
+          <!-- 4.4 Features -->
+          <ul data-section="4.4" class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Instant follow-up within minutes</li>
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Books appointments on your calendar</li>
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Natural-sounding conversations</li>
+            <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Full call recordings & transcripts</li>
+          </ul>
+        </div>
+        <!-- Image RIGHT -->
+        <div data-section="4.5" class="bg-white border border-gray-900 rounded-xl p-4">
+          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
+            <p class="text-gray-400">[AI Caller Interface]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 5: CRM & ANALYTICS (Image LEFT, Text RIGHT)
+       - 5.1 Label
+       - 5.2 Title
+       - 5.3 Description
+       - 5.4 Features List
+       - 5.5 Image
+       ============================================ -->
+  <section data-section="5" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Image LEFT -->
+        <div data-section="5.5" class="bg-white border border-gray-900 rounded-xl p-4 order-2 md:order-1">
+          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
+            <p class="text-gray-400">[CRM Dashboard Screenshot]</p>
+          </div>
+        </div>
+        <!-- Text Box RIGHT -->
+        <div data-section="5.0" class="bg-white border border-gray-900 rounded-xl p-8 order-1 md:order-2">
+          <!-- 5.1 Label -->
+          <span data-section="5.1" class="text-sm font-semibold text-secondary uppercase tracking-wide">CRM & Analytics</span>
+          <!-- 5.2 Title -->
+          <h2 data-section="5.2" class="text-3xl font-heading font-bold mt-2 mb-4">Track Everything in One Place</h2>
+          <!-- 5.3 Description -->
+          <p data-section="5.3" class="text-gray-600 mb-6">See every lead, every call, every conversion. Our integrated dashboard gives you full visibility into your sales pipeline.</p>
+          <!-- 5.4 Features -->
+          <ul data-section="5.4" class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2"><span class="text-secondary font-bold">✓</span> Real-time lead tracking</li>
+            <li class="flex items-start gap-2"><span class="text-secondary font-bold">✓</span> Conversion analytics</li>
+            <li class="flex items-start gap-2"><span class="text-secondary font-bold">✓</span> Call history & recordings</li>
+            <li class="flex items-start gap-2"><span class="text-secondary font-bold">✓</span> ROI reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 6: PRICING
+       - 6.1 Section Title
+       - 6.2 Subtitle
+       - 6.3 Tier: Basic
+       - 6.4 Tier: Pro
+       - 6.5 Tier: Enterprise
+       - 6.6 Add-on Note
+       ============================================ -->
+  <section id="pricing" data-section="6" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- 6.1 Section Title -->
+      <h2 data-section="6.1" class="text-4xl font-heading font-bold text-center mb-2">Simple, Transparent Pricing</h2>
+      <!-- 6.2 Subtitle -->
+      <p data-section="6.2" class="text-center text-gray-600 mb-12">No hidden fees. Cancel anytime.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- 6.3 Tier: Basic -->
+        <div data-section="6.3" class="bg-white border border-gray-900 rounded-xl p-8">
           <h3 class="text-2xl font-bold mb-2">Basic Website</h3>
-          <p class="text-4xl font-bold text-primary mb-4">$396</p>
-          <p class="text-gray-600 mb-6">One-time setup</p>
-          <ul class="space-y-3 mb-8">
-            <li>✓ 6 Pages (Home, About, Services, Contact, Gallery, Team)</li>
+          <p class="text-4xl font-bold text-primary mb-1">$396</p>
+          <p class="text-gray-500 text-sm mb-6">One-time setup</p>
+          <ul class="space-y-3 mb-8 text-gray-700">
+            <li>✓ 6 Pages</li>
             <li>✓ Mobile Responsive</li>
             <li>✓ Contact Form</li>
             <li>✓ Basic SEO</li>
           </ul>
-          <a href="#contact" class="block text-center bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+          <a href="#contact" class="block text-center bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-700 transition">Get Started</a>
         </div>
-        <!-- 3.4 Tier: Pro -->
-        <div data-section="3.4" class="bg-primary text-white p-8 rounded-xl shadow-xl transform scale-105">
-          <div class="text-sm bg-secondary inline-block px-3 py-1 rounded-full mb-4">Most Popular</div>
+        <!-- 6.4 Tier: Pro -->
+        <div data-section="6.4" class="bg-white border-2 border-primary rounded-xl p-8 shadow-xl relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-sm px-4 py-1 rounded-full">Most Popular</div>
           <h3 class="text-2xl font-bold mb-2">Pro Package</h3>
-          <p class="text-4xl font-bold mb-4">$697</p>
-          <p class="text-blue-200 mb-6">One-time + $99/mo</p>
-          <ul class="space-y-3 mb-8">
+          <p class="text-4xl font-bold text-primary mb-1">$697</p>
+          <p class="text-gray-500 text-sm mb-6">One-time + $99/mo</p>
+          <ul class="space-y-3 mb-8 text-gray-700">
             <li>✓ Everything in Basic</li>
             <li>✓ 50 Leads/month</li>
             <li>✓ AI Caller Setup</li>
             <li>✓ CRM Integration</li>
             <li>✓ Analytics Dashboard</li>
           </ul>
-          <a href="#contact" class="block text-center bg-white text-primary py-3 rounded-lg hover:bg-gray-100 transition font-semibold">Get Started</a>
+          <a href="#contact" class="block text-center bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition">Get Started</a>
         </div>
-        <!-- 3.5 Tier: Enterprise -->
-        <div data-section="3.5" class="bg-bglight p-8 rounded-xl border-2 border-gray-200">
+        <!-- 6.5 Tier: Enterprise -->
+        <div data-section="6.5" class="bg-white border border-gray-900 rounded-xl p-8">
           <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
-          <p class="text-4xl font-bold text-primary mb-4">Custom</p>
-          <p class="text-gray-600 mb-6">Tailored solutions</p>
-          <ul class="space-y-3 mb-8">
+          <p class="text-4xl font-bold text-primary mb-1">Custom</p>
+          <p class="text-gray-500 text-sm mb-6">Tailored solutions</p>
+          <ul class="space-y-3 mb-8 text-gray-700">
             <li>✓ Unlimited Pages</li>
             <li>✓ Unlimited Leads</li>
             <li>✓ Dedicated AI Callers</li>
             <li>✓ White-label Options</li>
             <li>✓ Priority Support</li>
           </ul>
-          <a href="#contact" class="block text-center bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition">Contact Us</a>
+          <a href="#contact" class="block text-center bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-700 transition">Contact Us</a>
         </div>
       </div>
-      <!-- 3.6 Add-on Note -->
-      <p data-section="3.6" class="text-center text-gray-500 mt-8">Add-on pages: +$69 each</p>
+      <!-- 6.6 Add-on Note -->
+      <p data-section="6.6" class="text-center text-gray-500 mt-8">Add-on pages: +$69 each</p>
     </div>
   </section>
 
   <!-- ============================================
-       SECTION 4: WEBSITE FEATURES
-       - 4.1 Section Title
-       - 4.2 Feature: Trade-Specific
-       - 4.3 Feature: Mobile-First
-       - 4.4 Feature: Fast Loading
-       - 4.5 Demo Preview Image
-       ============================================ -->
-  <section id="website" data-section="4" class="py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <!-- 4.1 Section Title -->
-      <h2 data-section="4.1" class="text-4xl font-heading font-bold text-center mb-12">Website Features</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <!-- 4.2 Feature: Trade-Specific -->
-          <div data-section="4.2" class="bg-card p-6 rounded-xl shadow-lg mb-6">
-            <h3 class="text-xl font-bold mb-3">🎨 Trade-Specific Designs</h3>
-            <p class="text-gray-600">Choose from templates designed for plumbers, electricians, HVAC techs, roofers, and general contractors.</p>
-          </div>
-          <!-- 4.3 Feature: Mobile-First -->
-          <div data-section="4.3" class="bg-card p-6 rounded-xl shadow-lg mb-6">
-            <h3 class="text-xl font-bold mb-3">📱 Mobile-First</h3>
-            <p class="text-gray-600">60% of your customers search on mobile. Our sites look perfect on every device.</p>
-          </div>
-          <!-- 4.4 Feature: Fast Loading -->
-          <div data-section="4.4" class="bg-card p-6 rounded-xl shadow-lg">
-            <h3 class="text-xl font-bold mb-3">⚡ Fast Loading</h3>
-            <p class="text-gray-600">Built with modern tech for lightning-fast load times. Better UX, better SEO.</p>
-          </div>
-        </div>
-        <!-- 4.5 Demo Preview Image -->
-        <div data-section="4.5" class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-8 aspect-video flex items-center justify-center">
-          <p class="text-gray-500 text-lg">[Website Demo Preview]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       SECTION 5: LEADS
-       - 5.1 Section Title
-       - 5.2 Stats Grid (4 items)
-       - 5.3 Process: Step 1
-       - 5.4 Process: Step 2
-       - 5.5 Process: Step 3
-       ============================================ -->
-  <section id="leads" data-section="5" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <!-- 5.1 Section Title -->
-      <h2 data-section="5.1" class="text-4xl font-heading font-bold text-center mb-12">Lead Generation That Works</h2>
-      <!-- 5.2 Stats Grid -->
-      <div data-section="5.2" class="grid md:grid-cols-4 gap-6 text-center mb-12">
-        <div class="bg-bglight p-6 rounded-xl">
-          <p class="text-4xl font-bold text-primary">500+</p>
-          <p class="text-gray-600">Leads Delivered</p>
-        </div>
-        <div class="bg-bglight p-6 rounded-xl">
-          <p class="text-4xl font-bold text-primary">89%</p>
-          <p class="text-gray-600">Contact Rate</p>
-        </div>
-        <div class="bg-bglight p-6 rounded-xl">
-          <p class="text-4xl font-bold text-primary">24hr</p>
-          <p class="text-gray-600">Lead Delivery</p>
-        </div>
-        <div class="bg-bglight p-6 rounded-xl">
-          <p class="text-4xl font-bold text-primary">5x</p>
-          <p class="text-gray-600">Avg ROI</p>
-        </div>
-      </div>
-      <div class="bg-card p-8 rounded-xl shadow-lg">
-        <h3 class="text-2xl font-bold mb-4">How Our Lead System Works</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- 5.3 Step 1 -->
-          <div data-section="5.3">
-            <div class="text-3xl font-bold text-secondary mb-2">1</div>
-            <h4 class="font-bold mb-2">We Find Prospects</h4>
-            <p class="text-gray-600">Using advanced data tools to find businesses in your area looking for your services.</p>
-          </div>
-          <!-- 5.4 Step 2 -->
-          <div data-section="5.4">
-            <div class="text-3xl font-bold text-secondary mb-2">2</div>
-            <h4 class="font-bold mb-2">We Qualify Them</h4>
-            <p class="text-gray-600">AI-powered screening ensures you only get leads worth your time.</p>
-          </div>
-          <!-- 5.5 Step 3 -->
-          <div data-section="5.5">
-            <div class="text-3xl font-bold text-secondary mb-2">3</div>
-            <h4 class="font-bold mb-2">You Close Deals</h4>
-            <p class="text-gray-600">Leads delivered to your CRM, ready for you to convert into customers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       SECTION 6: AI CALLERS
-       - 6.1 Section Title
-       - 6.2 Feature Box (left)
-       - 6.3 Card: Natural Conversations
-       - 6.4 Card: Full Reporting
-       - 6.5 Card: CRM Integration
-       ============================================ -->
-  <section id="callers" data-section="6" class="py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <!-- 6.1 Section Title -->
-      <h2 data-section="6.1" class="text-4xl font-heading font-bold text-center mb-12">AI-Powered Callers</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- 6.2 Feature Box -->
-        <div data-section="6.2" class="bg-gradient-to-br from-primary to-blue-800 text-white p-8 rounded-xl">
-          <h3 class="text-2xl font-bold mb-4">Never Miss a Lead Again</h3>
-          <p class="mb-6">Our AI callers work 24/7 to:</p>
-          <ul class="space-y-3">
-            <li>✓ Follow up on new leads within minutes</li>
-            <li>✓ Book appointments directly on your calendar</li>
-            <li>✓ Answer common questions about your services</li>
-            <li>✓ Qualify prospects before they reach you</li>
-          </ul>
-        </div>
-        <div>
-          <!-- 6.3 Card: Natural Conversations -->
-          <div data-section="6.3" class="bg-card p-6 rounded-xl shadow-lg mb-6">
-            <h4 class="font-bold mb-2">🤖 Natural Conversations</h4>
-            <p class="text-gray-600">Powered by advanced AI that sounds human and handles objections naturally.</p>
-          </div>
-          <!-- 6.4 Card: Full Reporting -->
-          <div data-section="6.4" class="bg-card p-6 rounded-xl shadow-lg mb-6">
-            <h4 class="font-bold mb-2">📊 Full Reporting</h4>
-            <p class="text-gray-600">See every call, every outcome, every booked appointment in your dashboard.</p>
-          </div>
-          <!-- 6.5 Card: CRM Integration -->
-          <div data-section="6.5" class="bg-card p-6 rounded-xl shadow-lg">
-            <h4 class="font-bold mb-2">🔗 CRM Integration</h4>
-            <p class="text-gray-600">Syncs with your existing tools. No double entry required.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       SECTION 7: CONTACT
+       SECTION 7: CUSTOMER STORIES (Blog-style Cards)
        - 7.1 Section Title
-       - 7.2 Subtitle
-       - 7.3 Cal.com Booking Widget
-       - 7.4 Contact Form
+       - 7.2 Story Card 1
+       - 7.3 Story Card 2
+       - 7.4 Story Card 3
+       - 7.5 Story Card 4
        ============================================ -->
-  <section id="contact" data-section="7" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
+  <section data-section="7" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
       <!-- 7.1 Section Title -->
-      <h2 data-section="7.1" class="text-4xl font-heading font-bold text-center mb-4">Ready to Grow?</h2>
-      <!-- 7.2 Subtitle -->
-      <p data-section="7.2" class="text-center text-gray-600 mb-12">Book a free consultation or send us a message.</p>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- 7.3 Cal.com Booking -->
-        <div data-section="7.3" class="bg-bglight p-8 rounded-xl">
+      <h2 data-section="7.1" class="text-4xl font-heading font-bold text-center mb-12">Customer Stories</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 7.2 Story Card 1 -->
+        <div data-section="7.2" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
+            <p class="text-gray-400 text-sm">[Customer Photo]</p>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-primary font-semibold mb-1">Plumbing</p>
+            <h3 class="font-bold text-gray-900">Mike's Plumbing Co.</h3>
+            <p class="text-gray-600 text-sm mt-2">"Doubled our leads in 30 days"</p>
+          </div>
+        </div>
+        <!-- 7.3 Story Card 2 -->
+        <div data-section="7.3" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
+            <p class="text-gray-400 text-sm">[Customer Photo]</p>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-primary font-semibold mb-1">HVAC</p>
+            <h3 class="font-bold text-gray-900">CoolAir Solutions</h3>
+            <p class="text-gray-600 text-sm mt-2">"AI caller books 15+ appointments weekly"</p>
+          </div>
+        </div>
+        <!-- 7.4 Story Card 3 -->
+        <div data-section="7.4" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
+            <p class="text-gray-400 text-sm">[Customer Photo]</p>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-secondary font-semibold mb-1">Roofing</p>
+            <h3 class="font-bold text-gray-900">TopShield Roofing</h3>
+            <p class="text-gray-600 text-sm mt-2">"Best ROI we've ever seen on marketing"</p>
+          </div>
+        </div>
+        <!-- 7.5 Story Card 4 -->
+        <div data-section="7.5" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
+            <p class="text-gray-400 text-sm">[Customer Photo]</p>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-primary font-semibold mb-1">Electrical</p>
+            <h3 class="font-bold text-gray-900">Bright Spark Electric</h3>
+            <p class="text-gray-600 text-sm mt-2">"Website brings in 20 calls per week"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 8: CONTACT
+       - 8.1 Section Title
+       - 8.2 Subtitle
+       - 8.3 Cal.com Booking Widget
+       - 8.4 Contact Form
+       ============================================ -->
+  <section id="contact" data-section="8" class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- 8.1 Section Title -->
+      <h2 data-section="8.1" class="text-4xl font-heading font-bold text-center mb-2">Ready to Grow?</h2>
+      <!-- 8.2 Subtitle -->
+      <p data-section="8.2" class="text-center text-gray-600 mb-12">Book a free consultation or send us a message.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- 8.3 Cal.com Booking -->
+        <div data-section="8.3" class="bg-white border border-gray-900 rounded-xl p-6">
           <h3 class="text-xl font-bold mb-4">Book a Call</h3>
           <p class="text-gray-600 mb-4">Schedule a 15-minute call to discuss your needs.</p>
-          <!-- Cal.com embed placeholder -->
-          <div class="bg-gray-200 rounded-lg p-8 text-center">
-            <p class="text-gray-500">[Cal.com Booking Widget]</p>
+          <div class="bg-gray-50 rounded-lg p-8 text-center border border-gray-200">
+            <p class="text-gray-400">[Cal.com Booking Widget]</p>
           </div>
         </div>
-        <!-- 7.4 Contact Form -->
-        <div data-section="7.4" class="bg-bglight p-8 rounded-xl">
+        <!-- 8.4 Contact Form -->
+        <div data-section="8.4" class="bg-white border border-gray-900 rounded-xl p-6">
           <h3 class="text-xl font-bold mb-4">Send a Message</h3>
-          <form class="space-y-4">
+          <form class="space-y-3">
             <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
             <input type="email" placeholder="Email Address" class="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
             <input type="tel" placeholder="Phone Number" class="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
@@ -301,8 +359,8 @@ import Layout from '../layouts/Layout.astro';
               <option>General Contractor</option>
               <option>Other</option>
             </select>
-            <textarea placeholder="Tell us about your business..." rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none"></textarea>
-            <button type="submit" class="w-full bg-secondary text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition">Send Message</button>
+            <textarea placeholder="Tell us about your business..." rows="3" class="w-full p-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none"></textarea>
+            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
           </form>
         </div>
       </div>
