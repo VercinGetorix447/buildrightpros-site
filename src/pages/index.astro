@@ -9,8 +9,9 @@ import Layout from '../layouts/Layout.astro';
        - 1.1 Headline
        - 1.2 Subheadline
        - 1.3 CTA Buttons
+       - 1.4 Hero Image
        ============================================ -->
-  <section id="hero" data-section="1" class="h-[50vh] min-h-[400px] flex items-center bg-gray-50">
+  <section id="hero" data-section="1" class="h-[50vh] min-h-[400px] flex items-center bg-gray-100">
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
@@ -24,12 +25,10 @@ import Layout from '../layouts/Layout.astro';
             <a href="#contact" class="border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition text-center">Book a Call</a>
           </div>
         </div>
-        <!-- 1.4 Hero Image -->
+        <!-- 1.4 Hero Image (NO border) -->
         <div data-section="1.4" class="hidden md:block">
-          <div class="bg-white border border-gray-900 rounded-xl p-6 shadow-lg">
-            <div class="bg-gray-100 rounded-lg aspect-video flex items-center justify-center">
-              <p class="text-gray-400">[Hero Image - Dashboard Preview]</p>
-            </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop" alt="Contractor at work" class="w-full h-auto">
           </div>
         </div>
       </div>
@@ -44,10 +43,10 @@ import Layout from '../layouts/Layout.astro';
        - 2.4 Features List
        - 2.5 Image
        ============================================ -->
-  <section id="services" data-section="2" class="py-20 bg-gray-100">
+  <section id="services" data-section="2" class="py-20 bg-gray-200">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Text Box LEFT -->
+        <!-- Text Box LEFT (WITH border) -->
         <div data-section="2.0" class="bg-white border border-gray-900 rounded-xl p-8">
           <!-- 2.1 Label -->
           <span data-section="2.1" class="text-sm font-semibold text-primary uppercase tracking-wide">Websites</span>
@@ -63,11 +62,9 @@ import Layout from '../layouts/Layout.astro';
             <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Lightning-fast load times</li>
           </ul>
         </div>
-        <!-- Image RIGHT -->
-        <div data-section="2.5" class="bg-white border border-gray-900 rounded-xl p-4">
-          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
-            <p class="text-gray-400">[Website Mockup Image]</p>
-          </div>
+        <!-- Image RIGHT (NO border) -->
+        <div data-section="2.5" class="rounded-xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="Website on laptop" class="w-full h-auto">
         </div>
       </div>
     </div>
@@ -81,16 +78,14 @@ import Layout from '../layouts/Layout.astro';
        - 3.4 Stats
        - 3.5 Image
        ============================================ -->
-  <section id="leads" data-section="3" class="py-20 bg-gray-50">
+  <section id="leads" data-section="3" class="py-20 bg-gray-100">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Image LEFT -->
-        <div data-section="3.5" class="bg-white border border-gray-900 rounded-xl p-4 order-2 md:order-1">
-          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
-            <p class="text-gray-400">[Lead Generation Dashboard]</p>
-          </div>
+        <!-- Image LEFT (NO border) -->
+        <div data-section="3.5" class="rounded-xl overflow-hidden shadow-lg order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Lead generation dashboard" class="w-full h-auto">
         </div>
-        <!-- Text Box RIGHT -->
+        <!-- Text Box RIGHT (WITH border) -->
         <div data-section="3.0" class="bg-white border border-gray-900 rounded-xl p-8 order-1 md:order-2">
           <!-- 3.1 Label -->
           <span data-section="3.1" class="text-sm font-semibold text-secondary uppercase tracking-wide">Lead Generation</span>
@@ -130,10 +125,10 @@ import Layout from '../layouts/Layout.astro';
        - 4.4 Features List
        - 4.5 Image
        ============================================ -->
-  <section id="callers" data-section="4" class="py-20 bg-gray-100">
+  <section id="callers" data-section="4" class="py-20 bg-gray-200">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Text Box LEFT -->
+        <!-- Text Box LEFT (WITH border) -->
         <div data-section="4.0" class="bg-white border border-gray-900 rounded-xl p-8">
           <!-- 4.1 Label -->
           <span data-section="4.1" class="text-sm font-semibold text-primary uppercase tracking-wide">AI Callers</span>
@@ -149,11 +144,9 @@ import Layout from '../layouts/Layout.astro';
             <li class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Full call recordings & transcripts</li>
           </ul>
         </div>
-        <!-- Image RIGHT -->
-        <div data-section="4.5" class="bg-white border border-gray-900 rounded-xl p-4">
-          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
-            <p class="text-gray-400">[AI Caller Interface]</p>
-          </div>
+        <!-- Image RIGHT (NO border) -->
+        <div data-section="4.5" class="rounded-xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=800&h=500&fit=crop" alt="AI phone assistant" class="w-full h-auto">
         </div>
       </div>
     </div>
@@ -167,16 +160,14 @@ import Layout from '../layouts/Layout.astro';
        - 5.4 Features List
        - 5.5 Image
        ============================================ -->
-  <section data-section="5" class="py-20 bg-gray-50">
+  <section data-section="5" class="py-20 bg-gray-100">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Image LEFT -->
-        <div data-section="5.5" class="bg-white border border-gray-900 rounded-xl p-4 order-2 md:order-1">
-          <div class="bg-gray-50 rounded-lg aspect-video flex items-center justify-center">
-            <p class="text-gray-400">[CRM Dashboard Screenshot]</p>
-          </div>
+        <!-- Image LEFT (NO border) -->
+        <div data-section="5.5" class="rounded-xl overflow-hidden shadow-lg order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Analytics dashboard" class="w-full h-auto">
         </div>
-        <!-- Text Box RIGHT -->
+        <!-- Text Box RIGHT (WITH border) -->
         <div data-section="5.0" class="bg-white border border-gray-900 rounded-xl p-8 order-1 md:order-2">
           <!-- 5.1 Label -->
           <span data-section="5.1" class="text-sm font-semibold text-secondary uppercase tracking-wide">CRM & Analytics</span>
@@ -197,66 +188,92 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ============================================
-       SECTION 6: PRICING
+       SECTION 6: PRICING (4 Tiers)
        - 6.1 Section Title
        - 6.2 Subtitle
-       - 6.3 Tier: Basic
-       - 6.4 Tier: Pro
-       - 6.5 Tier: Enterprise
-       - 6.6 Add-on Note
+       - 6.3 Tier: STARTER
+       - 6.4 Tier: CONTRACTOR
+       - 6.5 Tier: BRANDING
+       - 6.6 Tier: SCALE
+       - 6.7 Add-on Note
        ============================================ -->
-  <section id="pricing" data-section="6" class="py-20 bg-gray-100">
+  <section id="pricing" data-section="6" class="py-20 bg-gray-200">
     <div class="max-w-6xl mx-auto px-4">
       <!-- 6.1 Section Title -->
       <h2 data-section="6.1" class="text-4xl font-heading font-bold text-center mb-2">Simple, Transparent Pricing</h2>
       <!-- 6.2 Subtitle -->
       <p data-section="6.2" class="text-center text-gray-600 mb-12">No hidden fees. Cancel anytime.</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- 6.3 Tier: Basic -->
-        <div data-section="6.3" class="bg-white border border-gray-900 rounded-xl p-8">
-          <h3 class="text-2xl font-bold mb-2">Basic Website</h3>
-          <p class="text-4xl font-bold text-primary mb-1">$396</p>
-          <p class="text-gray-500 text-sm mb-6">One-time setup</p>
-          <ul class="space-y-3 mb-8 text-gray-700">
-            <li>✓ 6 Pages</li>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 6.3 Tier: STARTER -->
+        <div data-section="6.3" class="bg-white border border-gray-900 rounded-xl p-6">
+          <div class="rounded-lg overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=200&fit=crop" alt="Starter" class="w-full h-32 object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">STARTER</h3>
+          <p class="text-gray-500 text-sm mb-3 italic">in the game</p>
+          <p class="text-3xl font-bold text-primary mb-4">$297</p>
+          <ul class="space-y-2 mb-6 text-sm text-gray-700">
+            <li>✓ 3 Page Website</li>
             <li>✓ Mobile Responsive</li>
             <li>✓ Contact Form</li>
             <li>✓ Basic SEO</li>
           </ul>
-          <a href="#contact" class="block text-center bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-700 transition">Get Started</a>
+          <a href="#contact" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition text-sm">Get Started</a>
         </div>
-        <!-- 6.4 Tier: Pro -->
-        <div data-section="6.4" class="bg-white border-2 border-primary rounded-xl p-8 shadow-xl relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-sm px-4 py-1 rounded-full">Most Popular</div>
-          <h3 class="text-2xl font-bold mb-2">Pro Package</h3>
-          <p class="text-4xl font-bold text-primary mb-1">$697</p>
-          <p class="text-gray-500 text-sm mb-6">One-time + $99/mo</p>
-          <ul class="space-y-3 mb-8 text-gray-700">
-            <li>✓ Everything in Basic</li>
-            <li>✓ 50 Leads/month</li>
-            <li>✓ AI Caller Setup</li>
+        <!-- 6.4 Tier: CONTRACTOR -->
+        <div data-section="6.4" class="bg-white border border-gray-900 rounded-xl p-6">
+          <div class="rounded-lg overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=200&fit=crop" alt="Contractor" class="w-full h-32 object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">CONTRACTOR</h3>
+          <p class="text-gray-500 text-sm mb-3 italic">efficient contractor</p>
+          <p class="text-3xl font-bold text-primary mb-4">$497</p>
+          <ul class="space-y-2 mb-6 text-sm text-gray-700">
+            <li>✓ 6 Page Website</li>
             <li>✓ CRM Integration</li>
-            <li>✓ Analytics Dashboard</li>
+            <li>✓ 25 Leads/month</li>
+            <li>✓ Basic Analytics</li>
           </ul>
-          <a href="#contact" class="block text-center bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+          <a href="#contact" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition text-sm">Get Started</a>
         </div>
-        <!-- 6.5 Tier: Enterprise -->
-        <div data-section="6.5" class="bg-white border border-gray-900 rounded-xl p-8">
-          <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
-          <p class="text-4xl font-bold text-primary mb-1">Custom</p>
-          <p class="text-gray-500 text-sm mb-6">Tailored solutions</p>
-          <ul class="space-y-3 mb-8 text-gray-700">
+        <!-- 6.5 Tier: BRANDING (Popular) -->
+        <div data-section="6.5" class="bg-white border-2 border-primary rounded-xl p-6 shadow-xl relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-xs px-3 py-1 rounded-full">Most Popular</div>
+          <div class="rounded-lg overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=200&fit=crop" alt="Branding" class="w-full h-32 object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">BRANDING</h3>
+          <p class="text-gray-500 text-sm mb-3 italic">growing funnels</p>
+          <p class="text-3xl font-bold text-primary mb-4">$797</p>
+          <ul class="space-y-2 mb-6 text-sm text-gray-700">
+            <li>✓ 10 Page Website</li>
+            <li>✓ AI Caller Setup</li>
+            <li>✓ 50 Leads/month</li>
+            <li>✓ Full Analytics</li>
+            <li>✓ Social Media Kit</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-blue-700 transition text-sm">Get Started</a>
+        </div>
+        <!-- 6.6 Tier: SCALE -->
+        <div data-section="6.6" class="bg-white border border-gray-900 rounded-xl p-6">
+          <div class="rounded-lg overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=200&fit=crop" alt="Scale" class="w-full h-32 object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">SCALE</h3>
+          <p class="text-gray-500 text-sm mb-3 italic">funnel domination</p>
+          <p class="text-3xl font-bold text-primary mb-4">$1,497</p>
+          <ul class="space-y-2 mb-6 text-sm text-gray-700">
             <li>✓ Unlimited Pages</li>
-            <li>✓ Unlimited Leads</li>
             <li>✓ Dedicated AI Callers</li>
+            <li>✓ 200+ Leads/month</li>
             <li>✓ White-label Options</li>
             <li>✓ Priority Support</li>
           </ul>
-          <a href="#contact" class="block text-center bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-700 transition">Contact Us</a>
+          <a href="#contact" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition text-sm">Contact Us</a>
         </div>
       </div>
-      <!-- 6.6 Add-on Note -->
-      <p data-section="6.6" class="text-center text-gray-500 mt-8">Add-on pages: +$69 each</p>
+      <!-- 6.7 Add-on Note -->
+      <p data-section="6.7" class="text-center text-gray-500 mt-8">Add-on pages: +$69 each | Custom integrations available</p>
     </div>
   </section>
 
@@ -268,16 +285,14 @@ import Layout from '../layouts/Layout.astro';
        - 7.4 Story Card 3
        - 7.5 Story Card 4
        ============================================ -->
-  <section data-section="7" class="py-20 bg-gray-50">
+  <section data-section="7" class="py-20 bg-gray-100">
     <div class="max-w-6xl mx-auto px-4">
       <!-- 7.1 Section Title -->
       <h2 data-section="7.1" class="text-4xl font-heading font-bold text-center mb-12">Customer Stories</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- 7.2 Story Card 1 -->
         <div data-section="7.2" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
-          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
-            <p class="text-gray-400 text-sm">[Customer Photo]</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop" alt="Plumber" class="w-full h-40 object-cover">
           <div class="p-4">
             <p class="text-sm text-primary font-semibold mb-1">Plumbing</p>
             <h3 class="font-bold text-gray-900">Mike's Plumbing Co.</h3>
@@ -286,9 +301,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <!-- 7.3 Story Card 2 -->
         <div data-section="7.3" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
-          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
-            <p class="text-gray-400 text-sm">[Customer Photo]</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop" alt="HVAC" class="w-full h-40 object-cover">
           <div class="p-4">
             <p class="text-sm text-primary font-semibold mb-1">HVAC</p>
             <h3 class="font-bold text-gray-900">CoolAir Solutions</h3>
@@ -297,9 +310,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <!-- 7.4 Story Card 3 -->
         <div data-section="7.4" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
-          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
-            <p class="text-gray-400 text-sm">[Customer Photo]</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1632759145354-c7cf87215e56?w=400&h=300&fit=crop" alt="Roofing" class="w-full h-40 object-cover">
           <div class="p-4">
             <p class="text-sm text-secondary font-semibold mb-1">Roofing</p>
             <h3 class="font-bold text-gray-900">TopShield Roofing</h3>
@@ -308,9 +319,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <!-- 7.5 Story Card 4 -->
         <div data-section="7.5" class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
-          <div class="bg-gray-100 aspect-[4/3] flex items-center justify-center">
-            <p class="text-gray-400 text-sm">[Customer Photo]</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop" alt="Electrician" class="w-full h-40 object-cover">
           <div class="p-4">
             <p class="text-sm text-primary font-semibold mb-1">Electrical</p>
             <h3 class="font-bold text-gray-900">Bright Spark Electric</h3>
@@ -328,14 +337,14 @@ import Layout from '../layouts/Layout.astro';
        - 8.3 Cal.com Booking Widget
        - 8.4 Contact Form
        ============================================ -->
-  <section id="contact" data-section="8" class="py-20 bg-gray-100">
+  <section id="contact" data-section="8" class="py-20 bg-gray-200">
     <div class="max-w-4xl mx-auto px-4">
       <!-- 8.1 Section Title -->
       <h2 data-section="8.1" class="text-4xl font-heading font-bold text-center mb-2">Ready to Grow?</h2>
       <!-- 8.2 Subtitle -->
       <p data-section="8.2" class="text-center text-gray-600 mb-12">Book a free consultation or send us a message.</p>
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- 8.3 Cal.com Booking -->
+        <!-- 8.3 Cal.com Booking (WITH border) -->
         <div data-section="8.3" class="bg-white border border-gray-900 rounded-xl p-6">
           <h3 class="text-xl font-bold mb-4">Book a Call</h3>
           <p class="text-gray-600 mb-4">Schedule a 15-minute call to discuss your needs.</p>
@@ -343,7 +352,7 @@ import Layout from '../layouts/Layout.astro';
             <p class="text-gray-400">[Cal.com Booking Widget]</p>
           </div>
         </div>
-        <!-- 8.4 Contact Form -->
+        <!-- 8.4 Contact Form (WITH border) -->
         <div data-section="8.4" class="bg-white border border-gray-900 rounded-xl p-6">
           <h3 class="text-xl font-bold mb-4">Send a Message</h3>
           <form class="space-y-3">
