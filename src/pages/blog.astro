@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contractor Training & Feedback | BuildRightPros Blog">
+
+  <!-- ============================================
+       BLOG PAGE (Clerk.io /customers style)
+       - Hero with title + badges
+       - Logo grid (social proof)
+       - Testimonial sections by category
+       - Blog posts grid
+       ============================================ -->
+
+  <!-- Blog Hero -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Contractor Training & Feedback</h1>
+      <p class="text-xl text-gray-600 mb-8">Real stories, proven strategies, and insights from contractors who've grown their business with BuildRightPros.</p>
+
+      <!-- Rating Badges -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <div class="bg-white border border-gray-900 rounded-lg px-4 py-2 flex items-center gap-2">
+          <span class="text-yellow-500">★★★★★</span>
+          <span class="font-semibold">4.9</span>
+          <span class="text-gray-500 text-sm">Google</span>
+        </div>
+        <div class="bg-white border border-gray-900 rounded-lg px-4 py-2 flex items-center gap-2">
+          <span class="text-yellow-500">★★★★★</span>
+          <span class="font-semibold">4.8</span>
+          <span class="text-gray-500 text-sm">Trustpilot</span>
+        </div>
+        <div class="bg-white border border-gray-900 rounded-lg px-4 py-2 flex items-center gap-2">
+          <span class="text-yellow-500">★★★★☆</span>
+          <span class="font-semibold">4.7</span>
+          <span class="text-gray-500 text-sm">G2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Logos -->
+  <section class="py-8 bg-white border-y border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-center text-gray-500 text-sm mb-6">Trusted by contractors nationwide</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+        <span class="font-heading text-xl text-gray-700">Mike's Plumbing</span>
+        <span class="font-heading text-xl text-gray-700">CoolAir HVAC</span>
+        <span class="font-heading text-xl text-gray-700">TopShield Roofing</span>
+        <span class="font-heading text-xl text-gray-700">Bright Spark Electric</span>
+        <span class="font-heading text-xl text-gray-700">Pro Builders Co.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials by Category -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <!-- Category: Lead Generation -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-heading font-bold mb-8 flex items-center gap-3">
+          <span class="bg-primary text-white px-3 py-1 rounded text-sm">LEADS</span>
+          Lead Generation Results
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white border border-gray-900 rounded-xl p-6">
+            <p class="text-gray-700 mb-4">"We went from 10 leads a month to over 50. The ROI has been incredible—paid for itself in the first week."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">MJ</div>
+              <div>
+                <p class="font-semibold">Mike Johnson</p>
+                <p class="text-gray-500 text-sm">Mike's Plumbing Co.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white border border-gray-900 rounded-xl p-6">
+            <p class="text-gray-700 mb-4">"Quality leads that actually answer the phone. No more wasting time on dead ends."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">SR</div>
+              <div>
+                <p class="font-semibold">Sarah Rodriguez</p>
+                <p class="text-gray-500 text-sm">TopShield Roofing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: AI Callers -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-heading font-bold mb-8 flex items-center gap-3">
+          <span class="bg-secondary text-white px-3 py-1 rounded text-sm">AI CALLERS</span>
+          AI Caller Success Stories
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white border border-gray-900 rounded-xl p-6">
+            <p class="text-gray-700 mb-4">"The AI caller books 15+ appointments every week. It's like having a full-time receptionist."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">DW</div>
+              <div>
+                <p class="font-semibold">David Williams</p>
+                <p class="text-gray-500 text-sm">CoolAir Solutions</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white border border-gray-900 rounded-xl p-6">
+            <p class="text-gray-700 mb-4">"Customers can't tell it's AI. Follow-up happens instantly and we never miss a lead anymore."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">JT</div>
+              <div>
+                <p class="font-semibold">James Thompson</p>
+                <p class="text-gray-500 text-sm">Bright Spark Electric</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Websites -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-heading font-bold mb-8 flex items-center gap-3">
+          <span class="bg-primary text-white px-3 py-1 rounded text-sm">WEBSITES</span>
+          Website Conversion Wins
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white border border-gray-900 rounded-xl p-6">
+            <p class="text-gray-700 mb-4">"Our old site got 2 calls a week. The new one gets 20+. Complete game changer."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">RL</div>
+              <div>
+                <p class="font-semibold">Robert Lee</p>
+                <p class="text-gray-500 text-sm">Lee's General Contracting</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white border border-gray-900 rounded-xl p-6">
+            <p class="text-gray-700 mb-4">"Professional, fast-loading, and actually brings in business. Worth every penny."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">AM</div>
+              <div>
+                <p class="font-semibold">Angela Martinez</p>
+                <p class="text-gray-500 text-sm">Martinez HVAC Services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-16 bg-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-heading font-bold text-center mb-12">Latest Articles</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Post 1 -->
+        <article class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=300&fit=crop" alt="Lead generation" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-primary uppercase">Guide</span>
+            <h3 class="font-bold text-lg mt-1 mb-2">5 Ways to Get More Leads as a Contractor</h3>
+            <p class="text-gray-600 text-sm mb-4">Proven strategies to attract qualified leads without breaking the bank.</p>
+            <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=300&fit=crop" alt="AI calling" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-secondary uppercase">Case Study</span>
+            <h3 class="font-bold text-lg mt-1 mb-2">How CoolAir HVAC 3x'd Their Bookings</h3>
+            <p class="text-gray-600 text-sm mb-4">Real results from implementing AI-powered lead follow-up.</p>
+            <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="Website building" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-primary uppercase">Tutorial</span>
+            <h3 class="font-bold text-lg mt-1 mb-2">Building Your Contractor Website</h3>
+            <p class="text-gray-600 text-sm mb-4">Complete guide to creating a high-converting contractor site.</p>
+            <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop" alt="Marketing trends" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-secondary uppercase">Industry</span>
+            <h3 class="font-bold text-lg mt-1 mb-2">2024 Contractor Marketing Trends</h3>
+            <p class="text-gray-600 text-sm mb-4">What's working now and what to expect in the coming year.</p>
+            <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=300&fit=crop" alt="Scaling business" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-primary uppercase">Growth</span>
+            <h3 class="font-bold text-lg mt-1 mb-2">Scaling from Solo to 10+ Employees</h3>
+            <p class="text-gray-600 text-sm mb-4">How one plumber built a thriving team in 18 months.</p>
+            <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="bg-white border border-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=300&fit=crop" alt="Customer service" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-secondary uppercase">Tips</span>
+            <h3 class="font-bold text-lg mt-1 mb-2">Handling Difficult Customers Like a Pro</h3>
+            <p class="text-gray-600 text-sm mb-4">Turn complaints into 5-star reviews with these strategies.</p>
+            <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More -->
+      <div class="text-center mt-10">
+        <button class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-heading font-bold mb-4">Ready to Grow Your Business?</h2>
+      <p class="text-blue-100 mb-8">Join hundreds of contractors who've transformed their lead generation with BuildRightPros.</p>
+      <a href="/#contact" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Get Started Today</a>
+    </div>
+  </section>
+
+</Layout>
