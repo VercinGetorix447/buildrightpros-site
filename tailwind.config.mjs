@@ -10,7 +10,8 @@ export default {
         card: '#ffffff',
       },
       fontFamily: {
-        heading: ['"Arial Black"', 'Arial', 'Helvetica', 'sans-serif'],
+        hero: ['"Arial Black"', 'Impact', 'Arial', 'sans-serif'],
+        heading: ['"Rammetto One"', 'Impact', 'Arial Black', 'sans-serif'],
         body: ['Trebuchet MS', 'Montserrat', 'Arial', 'sans-serif'],
       },
     },
