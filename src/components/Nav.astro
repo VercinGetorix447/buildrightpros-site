@@ -256,6 +256,17 @@ const services = [
     z-index: 300;
   }
 
+  /* Bridge the gap between trigger and dropdown */
+  .dropdown-panel::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: transparent;
+  }
+
   .dropdown-panel.open {
     display: block;
     animation: fadeSlideDown 0.2s ease;
