@@ -1,0 +1,491 @@
+---
+const services = [
+  { label: 'Reputation Management',     desc: 'Google reviews, branding & CRM tracking',        href: '/services/reputation-management' },
+  { label: 'AI Receptionist & Bots',    desc: 'Voice agents, website bots & live booking',      href: '/ai-reception' },
+  { label: 'Lead Generation',           desc: 'Qualified lead management & outreach',           href: '/services/lead-generation' },
+  { label: 'Websites & Landing Pages',  desc: 'Full website builds & converting landing pages', href: '/services/websites' },
+  { label: 'Website Chat Widget',       desc: 'FAQ-trained bot with lead capture & SMS alerts', href: '/services/chat-widget' },
+  { label: 'Social Media',              desc: 'Easy integration & engagement management',       href: '/services/social-media' },
+  { label: 'SEO & Keyword Reports',     desc: 'AI search advantage with keyword tracking',      href: '/services/seo' },
+  { label: 'Expense OCR Automation',    desc: 'Upload receipts, auto-extract data instantly',   href: '/services/expense-ocr' },
+  { label: 'Sales & Ops Training',      desc: 'LMS courses and team training programs',         href: '/services/training' },
+  { label: 'Funnel Management',         desc: 'CRM & funnel boards to track every client',      href: '/services/crm' },
+  { label: 'Sales & Ops Coaching',      desc: '1-on-1 coaching to scale your business',         href: '/sales-ops-coaching' },
+  { label: 'Custom Solutions',          desc: 'Need help? Let\'s find the right solution',      href: '/#contact' },
+];
+---
+
+<nav class="site-nav" id="site-nav">
+  <!-- Logo -->
+  <a href="/" class="nav-logo">BuildRightPros</a>
+
+  <!-- Desktop Links -->
+  <div class="nav-links" id="nav-links">
+
+    <!-- Services Dropdown -->
+    <div class="nav-dropdown" id="services-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" id="services-btn">
+        Services
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="dropdown-panel" role="menu" id="services-panel">
+        <div class="dropdown-grid">
+          {services.map(s => (
+            <a href={s.href} class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-label">{s.label}</span>
+              <span class="dropdown-item-desc">{s.desc}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <a href="/#how-it-works" class="nav-link">What We Do</a>
+    <a href="/ai-reception" class="nav-link">AI Reception</a>
+    <a href="/sales-ops-coaching" class="nav-link">Sales/Ops Coaching</a>
+    <a href="/#customers" class="nav-link">Reviews</a>
+    <a href="/#pricing" class="nav-link">Pricing</a>
+    <a href="/blog" class="nav-link">Blog</a>
+    <a href="/#contact" class="nav-link">Contact Us</a>
+  </div>
+
+  <!-- Right Side -->
+  <div class="nav-right">
+    <a href="https://cal.com/buildrightpros.com/60-min-meeting"
+       class="btn-demo"
+       target="_blank"
+       rel="noopener noreferrer">
+      Book a Demo
+    </a>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile backdrop -->
+<div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+<script>
+  // ── element refs ──────────────────────────────────────────────────────────
+  const hamburger   = document.getElementById('hamburger-btn') as HTMLButtonElement;
+  const navLinks    = document.getElementById('nav-links') as HTMLElement;
+  const backdrop    = document.getElementById('nav-backdrop') as HTMLElement;
+  const servicesBtn = document.getElementById('services-btn') as HTMLButtonElement;
+  const servicesPanel = document.getElementById('services-panel') as HTMLElement;
+
+  // ── helpers ───────────────────────────────────────────────────────────────
+  function openMenu() {
+    navLinks.classList.add('open');
+    backdrop.classList.add('visible');
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    backdrop.classList.remove('visible');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    closeDropdown();
+  }
+
+  function openDropdown() {
+    servicesPanel.classList.add('open');
+    servicesBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    servicesPanel.classList.remove('open');
+    servicesBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleDropdown() {
+    servicesPanel.classList.contains('open') ? closeDropdown() : openDropdown();
+  }
+
+  // ── hamburger ─────────────────────────────────────────────────────────────
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  backdrop.addEventListener('click', closeMenu);
+
+  // ── services dropdown ─────────────────────────────────────────────────────
+  servicesBtn.addEventListener('click', toggleDropdown);
+
+  // Hover behaviour (desktop): open on mouseenter, close on mouseleave
+  const dropdownWrapper = document.getElementById('services-dropdown') as HTMLElement;
+
+  dropdownWrapper.addEventListener('mouseenter', () => {
+    if (window.innerWidth >= 768) openDropdown();
+  });
+  dropdownWrapper.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 768) closeDropdown();
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e: MouseEvent) => {
+    if (!dropdownWrapper.contains(e.target as Node)) {
+      closeDropdown();
+    }
+  });
+
+  // Close mobile menu on any anchor link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navLinks.classList.contains('open')) closeMenu();
+    });
+  });
+
+  // Close on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+</script>
+
+<style>
+  /* ── Sticky nav wrapper ─────────────────────────────────────────────── */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 64px;
+    background: var(--dark);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ── Logo ───────────────────────────────────────────────────────────── */
+  .nav-logo {
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
+    color: var(--nav-text, #ffffff);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+  }
+
+  /* ── Desktop link row ───────────────────────────────────────────────── */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .nav-link {
+    color: var(--nav-text, #ffffff);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  /* ── Services dropdown trigger ──────────────────────────────────────── */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--nav-text, #ffffff);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: inherit;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-trigger:hover {
+    color: var(--accent);
+  }
+
+  .chevron {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .nav-dropdown-trigger[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* ── Dropdown panel ─────────────────────────────────────────────────── */
+  .dropdown-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 780px;
+    background: #1a1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    z-index: 300;
+  }
+
+  .dropdown-panel.open {
+    display: block;
+    animation: fadeSlideDown 0.2s ease;
+  }
+
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  }
+
+  .dropdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.25rem;
+  }
+
+  .dropdown-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .dropdown-item-label {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .dropdown-item-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+
+  /* ── Right side (CTA + hamburger) ──────────────────────────────────── */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* ── Book a Demo button ─────────────────────────────────────────────── */
+  .btn-demo {
+    display: inline-block;
+    padding: 0.55rem 1.25rem;
+    background: var(--primary, var(--accent));
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn-demo:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  /* ── Hamburger ──────────────────────────────────────────────────────── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .hamburger:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── Mobile backdrop ────────────────────────────────────────────────── */
+  .nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+
+  .nav-backdrop.visible {
+    display: block;
+  }
+
+  /* ── Responsive: mobile ─────────────────────────────────────────────── */
+  @media (max-width: 767px) {
+    .site-nav { padding: 0 1rem; z-index: 200; }
+
+    .hamburger { display: flex; }
+
+    /* Hide desktop nav until opened */
+    .nav-links {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--dark);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 1rem 0;
+      overflow-y: auto;
+      z-index: 190;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links.open {
+      transform: translateX(0);
+    }
+
+    .nav-link,
+    .nav-dropdown-trigger {
+      display: block;
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-dropdown {
+      width: 100%;
+    }
+
+    /* Mobile dropdown panel: inline, not absolute */
+    .dropdown-panel {
+      position: static;
+      transform: none;
+      min-width: 0;
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: none;
+      padding: 0.5rem 0;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .dropdown-panel.open {
+      animation: none;
+    }
+
+    .dropdown-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .dropdown-item {
+      border-radius: 0;
+      padding: 0.7rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    /* Hide "Book a Demo" in desktop position; show it at bottom of mobile menu */
+    .btn-demo {
+      display: none;
+    }
+
+    .nav-links .btn-demo-mobile {
+      display: inline-block;
+      margin: 1.25rem 1.5rem 0;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary, var(--accent));
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links .btn-demo-mobile:hover { opacity: 0.85; }
+  }
+
+  /* ── Responsive: mid-range ──────────────────────────────────────────── */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .site-nav { padding: 0 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .dropdown-panel { min-width: 480px; }
+    .btn-demo { padding: 0.5rem 1rem; font-size: 0.8rem; }
+  }
+</style>
+
+<!-- Mobile "Book a Demo" injected inside nav-links for mobile view -->
+<script>
+  const navLinksEl = document.getElementById('nav-links');
+  if (navLinksEl) {
+    const mobileBtn = document.createElement('a');
+    mobileBtn.href = 'https://cal.com/buildrightpros.com/60-min-meeting';
+    mobileBtn.className = 'btn-demo-mobile';
+    mobileBtn.target = '_blank';
+    mobileBtn.rel = 'noopener noreferrer';
+    mobileBtn.textContent = 'Book a Demo';
+    navLinksEl.appendChild(mobileBtn);
+  }
+</script>

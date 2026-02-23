@@ -1,0 +1,351 @@
+---
+// Advanced ROI Calculator with Pain Point Funnel
+// Calculates lost revenue based on who answers phones + call handling
+---
+
+<div class="roi-calculator-container bg-white rounded-lg shadow-xl p-8 max-w-4xl mx-auto my-12">
+  <h2 class="text-3xl font-bold text-gray-900 mb-2 text-center">
+    How Much Revenue Are You Losing Every Month?
+  </h2>
+  <p class="text-gray-600 text-center mb-8">
+    Most contractors lose 30-60% of potential revenue to missed calls. Let's calculate your actual loss.
+  </p>
+
+  <!-- Calculator Form -->
+  <div class="calculator-form space-y-6">
+
+    <!-- Business Revenue -->
+    <div class="form-group">
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+        What's your monthly revenue?
+      </label>
+      <div class="flex items-center gap-4">
+        <input
+          type="range"
+          id="monthlyRevenue"
+          min="10000"
+          max="500000"
+          step="10000"
+          value="50000"
+          class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+        />
+        <span id="revenueDisplay" class="text-xl font-bold text-[#FF6B35] min-w-[120px]">$50,000</span>
+      </div>
+    </div>
+
+    <!-- Call Volume -->
+    <div class="form-group">
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+        How many calls do you get per week?
+      </label>
+      <div class="flex items-center gap-4">
+        <input
+          type="range"
+          id="weeklyCallVolume"
+          min="5"
+          max="200"
+          step="5"
+          value="30"
+          class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+        />
+        <span id="callVolumeDisplay" class="text-xl font-bold text-[#FF6B35] min-w-[120px]">30 calls</span>
+      </div>
+    </div>
+
+    <!-- Average Ticket Price -->
+    <div class="form-group">
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+        What's your average job value?
+      </label>
+      <div class="flex items-center gap-4">
+        <input
+          type="range"
+          id="avgTicket"
+          min="100"
+          max="10000"
+          step="100"
+          value="1500"
+          class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+        />
+        <span id="ticketDisplay" class="text-xl font-bold text-[#FF6B35] min-w-[120px]">$1,500</span>
+      </div>
+    </div>
+
+    <!-- Conversion Rate -->
+    <div class="form-group">
+      <label class="block text-sm font-semibold text-gray-700 mb-2">
+        What's your close rate when you talk to a lead?
+      </label>
+      <div class="flex items-center gap-4">
+        <input
+          type="range"
+          id="closeRate"
+          min="10"
+          max="80"
+          step="5"
+          value="40"
+          class="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+        />
+        <span id="closeRateDisplay" class="text-xl font-bold text-[#FF6B35] min-w-[120px]">40%</span>
+      </div>
+    </div>
+
+    <!-- WHO ANSWERS CALLS - The Pain Point Multiplier -->
+    <div class="form-group">
+      <label class="block text-sm font-semibold text-gray-700 mb-3">
+        Who answers your phone calls?
+      </label>
+      <div class="space-y-3">
+        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#FF6B35] transition-colors">
+          <input type="radio" name="callHandler" value="self" class="w-5 h-5 text-[#FF6B35]" checked />
+          <div class="ml-3">
+            <span class="font-medium text-gray-900">I answer them myself</span>
+            <p class="text-sm text-red-600">⚠️ Highest missed call rate (60-80%)</p>
+          </div>
+        </label>
+
+        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#FF6B35] transition-colors">
+          <input type="radio" name="callHandler" value="spouse" class="w-5 h-5 text-[#FF6B35]" />
+          <div class="ml-3">
+            <span class="font-medium text-gray-900">My spouse/family member</span>
+            <p class="text-sm text-orange-600">⚠️ High missed call rate (40-60%)</p>
+          </div>
+        </label>
+
+        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#FF6B35] transition-colors">
+          <input type="radio" name="callHandler" value="service" class="w-5 h-5 text-[#FF6B35]" />
+          <div class="ml-3">
+            <span class="font-medium text-gray-900">Answering service</span>
+            <p class="text-sm text-yellow-600">⚠️ Moderate missed call rate (20-40%)</p>
+          </div>
+        </label>
+
+        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#FF6B35] transition-colors">
+          <input type="radio" name="callHandler" value="secretary" class="w-5 h-5 text-[#FF6B35]" />
+          <div class="ml-3">
+            <span class="font-medium text-gray-900">Full-time secretary/receptionist</span>
+            <p class="text-sm text-green-600">✓ Lower missed call rate (10-20%)</p>
+          </div>
+        </label>
+
+        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-[#FF6B35] transition-colors">
+          <input type="radio" name="callHandler" value="other" class="w-5 h-5 text-[#FF6B35]" />
+          <div class="ml-3">
+            <span class="font-medium text-gray-900">Other/It varies</span>
+            <p class="text-sm text-orange-600">⚠️ Inconsistent (30-50%)</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Results Display -->
+  <div id="resultsPanel" class="mt-8 p-6 bg-gradient-to-br from-red-50 to-orange-50 rounded-lg border-2 border-red-200">
+    <div class="text-center mb-6">
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Monthly Lost Revenue:</h3>
+      <div class="text-6xl font-black text-red-600" id="lostRevenue">$18,000</div>
+      <p class="text-gray-600 mt-2">based on <span id="missedCallsDisplay" class="font-bold">52 missed calls/month</span></p>
+    </div>
+
+    <!-- Breakdown -->
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white p-4 rounded-lg">
+        <div class="text-sm text-gray-600">Total Monthly Calls</div>
+        <div class="text-2xl font-bold text-gray-900" id="totalCalls">120</div>
+      </div>
+      <div class="bg-white p-4 rounded-lg">
+        <div class="text-sm text-gray-600">Missed Call Rate</div>
+        <div class="text-2xl font-bold text-red-600" id="missedRate">60%</div>
+      </div>
+      <div class="bg-white p-4 rounded-lg">
+        <div class="text-sm text-gray-600">Missed Calls/Month</div>
+        <div class="text-2xl font-bold text-red-600" id="missedCalls">72</div>
+      </div>
+      <div class="bg-white p-4 rounded-lg">
+        <div class="text-sm text-gray-600">Potential Conversions Lost</div>
+        <div class="text-2xl font-bold text-red-600" id="lostDeals">29</div>
+      </div>
+    </div>
+
+    <!-- Annual Impact -->
+    <div class="text-center p-4 bg-red-600 text-white rounded-lg mb-6">
+      <div class="text-sm font-semibold">Annual Revenue Loss:</div>
+      <div class="text-4xl font-black" id="annualLoss">$216,000</div>
+    </div>
+
+    <!-- Why This Happens -->
+    <div id="painPointExplanation" class="bg-white p-6 rounded-lg mb-6">
+      <h4 class="font-bold text-gray-900 mb-3">Why You're Losing These Calls:</h4>
+      <ul class="space-y-2 text-gray-700" id="painPoints">
+        <!-- Dynamically populated based on selection -->
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+      <button class="bg-[#FF6B35] hover:bg-[#E55A25] text-white font-bold py-4 px-8 rounded-lg text-xl transition-colors shadow-lg">
+        Stop Losing $<span id="ctaAmount">18,000</span>/Month — Get Started Free
+      </button>
+      <p class="text-sm text-gray-600 mt-3">7-day free trial • No credit card required • Setup in 24 hours</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Calculator Logic
+  const elements = {
+    monthlyRevenue: document.getElementById('monthlyRevenue'),
+    revenueDisplay: document.getElementById('revenueDisplay'),
+    weeklyCallVolume: document.getElementById('weeklyCallVolume'),
+    callVolumeDisplay: document.getElementById('callVolumeDisplay'),
+    avgTicket: document.getElementById('avgTicket'),
+    ticketDisplay: document.getElementById('ticketDisplay'),
+    closeRate: document.getElementById('closeRate'),
+    closeRateDisplay: document.getElementById('closeRateDisplay'),
+    callHandlers: document.querySelectorAll('input[name="callHandler"]'),
+    lostRevenue: document.getElementById('lostRevenue'),
+    missedCallsDisplay: document.getElementById('missedCallsDisplay'),
+    totalCalls: document.getElementById('totalCalls'),
+    missedRate: document.getElementById('missedRate'),
+    missedCalls: document.getElementById('missedCalls'),
+    lostDeals: document.getElementById('lostDeals'),
+    annualLoss: document.getElementById('annualLoss'),
+    ctaAmount: document.getElementById('ctaAmount'),
+    painPoints: document.getElementById('painPoints')
+  };
+
+  // Missed Call Rate Based on Who Answers
+  const missedCallRates = {
+    self: { min: 60, max: 80, avg: 70, reasons: [
+      "You're on job sites and can't pick up",
+      "You're talking to another customer",
+      "You're driving between appointments",
+      "Phone is in truck while you're working",
+      "After-hours calls go unanswered",
+      "You're with family and ignore work calls"
+    ]},
+    spouse: { min: 40, max: 60, avg: 50, reasons: [
+      "They're not always available to answer",
+      "They may not know how to qualify leads",
+      "Customers prefer talking to the business owner",
+      "They juggle multiple responsibilities",
+      "Technical questions go unanswered"
+    ]},
+    service: { min: 20, max: 40, avg: 30, reasons: [
+      "Generic answering services sound impersonal",
+      "They can't answer specific questions about your services",
+      "Customers hang up before leaving a message",
+      "Messages get lost or delayed",
+      "No immediate appointment booking"
+    ]},
+    secretary: { min: 10, max: 20, avg: 15, reasons: [
+      "Even secretaries take breaks and lunches",
+      "Sick days and vacations create gaps",
+      "After-hours calls still go unanswered",
+      "Costs $35,000-$45,000/year in salary + benefits"
+    ]},
+    other: { min: 30, max: 50, avg: 40, reasons: [
+      "Inconsistent coverage creates uncertainty",
+      "Customers don't know when they'll reach someone",
+      "Some calls answered professionally, others missed entirely",
+      "Leads go to more reliable competitors"
+    ]}
+  };
+
+  function formatCurrency(num) {
+    return '$' + num.toLocaleString('en-US', { maximumFractionDigits: 0 });
+  }
+
+  function calculate() {
+    const monthlyRevenue = parseInt(elements.monthlyRevenue.value);
+    const weeklyCallVolume = parseInt(elements.weeklyCallVolume.value);
+    const avgTicket = parseInt(elements.avgTicket.value);
+    const closeRate = parseInt(elements.closeRate.value) / 100;
+    const callHandler = document.querySelector('input[name="callHandler"]:checked').value;
+
+    const missedRateData = missedCallRates[callHandler];
+    const missedRatePercent = missedRateData.avg;
+    const missedRate = missedRatePercent / 100;
+
+    // Calculations
+    const monthlyCallVolume = weeklyCallVolume * 4.33; // average weeks per month
+    const missedCallsPerMonth = Math.round(monthlyCallVolume * missedRate);
+    const potentialConversions = Math.round(missedCallsPerMonth * closeRate);
+    const monthlyLostRevenue = potentialConversions * avgTicket;
+    const annualLostRevenue = monthlyLostRevenue * 12;
+
+    // Update displays
+    elements.revenueDisplay.textContent = formatCurrency(monthlyRevenue);
+    elements.callVolumeDisplay.textContent = weeklyCallVolume + ' calls';
+    elements.ticketDisplay.textContent = formatCurrency(avgTicket);
+    elements.closeRateDisplay.textContent = Math.round(closeRate * 100) + '%';
+
+    elements.totalCalls.textContent = Math.round(monthlyCallVolume);
+    elements.missedRate.textContent = missedRatePercent + '%';
+    elements.missedCalls.textContent = missedCallsPerMonth;
+    elements.lostDeals.textContent = potentialConversions;
+    elements.lostRevenue.textContent = formatCurrency(monthlyLostRevenue);
+    elements.annualLoss.textContent = formatCurrency(annualLostRevenue);
+    elements.ctaAmount.textContent = formatCurrency(monthlyLostRevenue).replace('$', '');
+    elements.missedCallsDisplay.textContent = missedCallsPerMonth + ' missed calls/month';
+
+    // Update pain points
+    const reasons = missedRateData.reasons;
+    elements.painPoints.innerHTML = reasons.map(reason =>
+      `<li class="flex items-start"><span class="text-red-500 mr-2">✗</span>${reason}</li>`
+    ).join('');
+  }
+
+  // Event listeners
+  elements.monthlyRevenue.addEventListener('input', calculate);
+  elements.weeklyCallVolume.addEventListener('input', calculate);
+  elements.avgTicket.addEventListener('input', calculate);
+  elements.closeRate.addEventListener('input', calculate);
+  elements.callHandlers.forEach(handler => {
+    handler.addEventListener('change', calculate);
+  });
+
+  // Initial calculation
+  calculate();
+</script>
+
+<style>
+  /* Custom range slider styling */
+  input[type="range"] {
+    -webkit-appearance: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #FF6B35;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #FF6B35;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  input[type="radio"]:checked + div {
+    color: #FF6B35;
+  }
+
+  .roi-calculator-container {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
