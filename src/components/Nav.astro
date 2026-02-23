@@ -179,7 +179,7 @@ const coaching = [
 
   servicesDropdownWrapper.addEventListener('mouseleave', () => {
     if (window.innerWidth >= 768) {
-      servicesCloseTimeout = window.setTimeout(() => closeServicesDropdown(), 300);
+      servicesCloseTimeout = window.setTimeout(() => closeServicesDropdown(), 500);
     }
   });
 
@@ -193,7 +193,7 @@ const coaching = [
 
   servicesPanel.addEventListener('mouseleave', () => {
     if (window.innerWidth >= 768) {
-      servicesCloseTimeout = window.setTimeout(() => closeServicesDropdown(), 300);
+      servicesCloseTimeout = window.setTimeout(() => closeServicesDropdown(), 500);
     }
   });
 
@@ -220,7 +220,7 @@ const coaching = [
 
   coachingDropdownWrapper.addEventListener('mouseleave', () => {
     if (window.innerWidth >= 768) {
-      coachingCloseTimeout = window.setTimeout(() => closeCoachingDropdown(), 300);
+      coachingCloseTimeout = window.setTimeout(() => closeCoachingDropdown(), 500);
     }
   });
 
@@ -234,7 +234,7 @@ const coaching = [
 
   coachingPanel.addEventListener('mouseleave', () => {
     if (window.innerWidth >= 768) {
-      coachingCloseTimeout = window.setTimeout(() => closeCoachingDropdown(), 300);
+      coachingCloseTimeout = window.setTimeout(() => closeCoachingDropdown(), 500);
     }
   });
 
@@ -364,18 +364,18 @@ const coaching = [
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
     padding: 1rem;
     padding-top: 1rem;
-    margin-top: 1px;
+    margin-top: 0;
     z-index: 300;
   }
 
-  /* Bridge the gap between trigger and dropdown - minimal 1px gap */
+  /* No gap - direct attachment for reliable hover */
   .dropdown-panel::before {
     content: '';
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 0;
     background: transparent;
   }
 
