@@ -34,12 +34,12 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
         <div class="stat-label">Of calls go unanswered during business hours</div>
       </div>
       <div class="stat-box">
-        <div class="stat-number">$2,500+</div>
-        <div class="stat-label">Lost revenue per missed call on average</div>
+        <div class="stat-number">62%</div>
+        <div class="stat-label">Of customers won't call back after voicemail</div>
       </div>
       <div class="stat-box">
-        <div class="stat-number">8+ hrs/week</div>
-        <div class="stat-label">Wasted on phone tag and callbacks</div>
+        <div class="stat-number">30%</div>
+        <div class="stat-label">Revenue increase when calls answered in 3 rings</div>
       </div>
     </div>
   </section>
@@ -138,12 +138,12 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
           <div class="pricing-badge">Most Popular</div>
           <h3 class="pricing-title">AI Reception Service</h3>
           <div class="pricing-amount">
-            <span class="price">$149</span>
+            <span class="price">$296</span>
             <span class="period">/month</span>
           </div>
           <div class="pricing-setup">
-            <span class="setup-label">One-time setup:</span>
-            <span class="setup-price">$99</span>
+            <span class="setup-label">Setup fee:</span>
+            <span class="setup-price">As little as $496 to get your business started</span>
           </div>
 
           <ul class="pricing-features">
@@ -155,6 +155,10 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
             <li>✓ Email & SMS alerts</li>
             <li>✓ Calendar integration</li>
           </ul>
+
+          <div class="pricing-usage">
+            <p><strong>Usage-based pricing:</strong> + usage fee based on call volume (typically $0.10-0.30 per minute of AI call time)</p>
+          </div>
 
           <div class="pricing-trial">
             <strong>7-Day Free Trial</strong> — No credit card required
@@ -593,9 +597,10 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   }
 
   .setup-price {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--dark);
+    line-height: 1.4;
   }
 
   .pricing-features {
@@ -608,6 +613,21 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
     padding: 0.75rem 0;
     color: var(--dark);
     font-size: 1.125rem;
+  }
+
+  .pricing-usage {
+    background: #EFF6FF;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+
+  .pricing-usage p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .pricing-trial {

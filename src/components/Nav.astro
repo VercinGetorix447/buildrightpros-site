@@ -121,19 +121,40 @@ const services = [
   // ── services dropdown ─────────────────────────────────────────────────────
   servicesBtn.addEventListener('click', toggleDropdown);
 
-  // Hover behaviour (desktop): open on mouseenter, close on mouseleave
+  // Hover behaviour (desktop): open on mouseenter, close on mouseleave with delay
   const dropdownWrapper = document.getElementById('services-dropdown') as HTMLElement;
+  let closeTimeout: number | null = null;
 
   dropdownWrapper.addEventListener('mouseenter', () => {
-    if (window.innerWidth >= 768) openDropdown();
+    if (window.innerWidth >= 768) {
+      if (closeTimeout) clearTimeout(closeTimeout);
+      openDropdown();
+    }
   });
+
   dropdownWrapper.addEventListener('mouseleave', () => {
-    if (window.innerWidth >= 768) closeDropdown();
+    if (window.innerWidth >= 768) {
+      closeTimeout = window.setTimeout(() => closeDropdown(), 300);
+    }
+  });
+
+  // Also handle mouse enter/leave on the panel itself
+  servicesPanel.addEventListener('mouseenter', () => {
+    if (window.innerWidth >= 768) {
+      if (closeTimeout) clearTimeout(closeTimeout);
+      openDropdown();
+    }
+  });
+
+  servicesPanel.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 768) {
+      closeTimeout = window.setTimeout(() => closeDropdown(), 300);
+    }
   });
 
   // Close dropdown when clicking outside
   document.addEventListener('click', (e: MouseEvent) => {
-    if (!dropdownWrapper.contains(e.target as Node)) {
+    if (!dropdownWrapper.contains(e.target as Node) && !servicesPanel.contains(e.target as Node)) {
       closeDropdown();
     }
   });
