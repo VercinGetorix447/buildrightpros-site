@@ -9,9 +9,17 @@ const services = [
   { label: 'SEO & Keyword Reports',          desc: 'AI search advantage with keyword tracking',       href: '/services/seo' },
   { label: 'CRM & Funnels',                  desc: 'Client tracking & sales funnel management',       href: '/services/crm' },
   { label: 'Expense Capture',                desc: 'Upload receipts, auto-extract data instantly',    href: '/services/expense-capture' },
-  { label: 'Sales Coaching',                 desc: 'Sales training & business growth coaching',       href: '/services/sales-coaching' },
-  { label: 'Financial Coaching',             desc: 'Financial planning & business finance guidance',  href: '/services/financial-coaching' },
   { label: 'Custom Solutions',               desc: 'Need help? Let\'s find the right solution',       href: '/#contact' },
+];
+
+const coaching = [
+  { label: 'Sales Coaching',           desc: 'Improve close rates & sales process',      href: '/coaching/sales' },
+  { label: 'Operations Coaching',      desc: 'Streamline workflows & efficiency',        href: '/coaching/operations' },
+  { label: 'Financial Coaching',       desc: 'Job costing, pricing & profitability',     href: '/coaching/financial' },
+  { label: 'Legal Coaching',           desc: 'Contracts, compliance & risk management',  href: '/coaching/legal' },
+  { label: 'Social Presence Coaching', desc: 'Social media & online reputation',         href: '/coaching/social-presence' },
+  { label: 'Network Coaching',         desc: 'Referrals, partnerships & community',      href: '/coaching/network' },
+  { label: 'Website Coaching',         desc: 'Website optimization & lead conversion',   href: '/coaching/website' }
 ];
 ---
 
@@ -36,6 +44,26 @@ const services = [
             <a href={s.href} class="dropdown-item" role="menuitem">
               <span class="dropdown-item-label">{s.label}</span>
               <span class="dropdown-item-desc">{s.desc}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Coaching Dropdown -->
+    <div class="nav-dropdown" id="coaching-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" id="coaching-btn">
+        Coaching
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="dropdown-panel" role="menu" id="coaching-panel">
+        <div class="dropdown-grid">
+          {coaching.map(c => (
+            <a href={c.href} class="dropdown-item" role="menuitem">
+              <span class="dropdown-item-label">{c.label}</span>
+              <span class="dropdown-item-desc">{c.desc}</span>
             </a>
           ))}
         </div>
@@ -80,6 +108,8 @@ const services = [
   const backdrop    = document.getElementById('nav-backdrop') as HTMLElement;
   const servicesBtn = document.getElementById('services-btn') as HTMLButtonElement;
   const servicesPanel = document.getElementById('services-panel') as HTMLElement;
+  const coachingBtn = document.getElementById('coaching-btn') as HTMLButtonElement;
+  const coachingPanel = document.getElementById('coaching-panel') as HTMLElement;
 
   // ── helpers ───────────────────────────────────────────────────────────────
   function openMenu() {
@@ -94,21 +124,36 @@ const services = [
     backdrop.classList.remove('visible');
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
-    closeDropdown();
+    closeServicesDropdown();
+    closeCoachingDropdown();
   }
 
-  function openDropdown() {
+  function openServicesDropdown() {
     servicesPanel.classList.add('open');
     servicesBtn.setAttribute('aria-expanded', 'true');
   }
 
-  function closeDropdown() {
+  function closeServicesDropdown() {
     servicesPanel.classList.remove('open');
     servicesBtn.setAttribute('aria-expanded', 'false');
   }
 
-  function toggleDropdown() {
-    servicesPanel.classList.contains('open') ? closeDropdown() : openDropdown();
+  function toggleServicesDropdown() {
+    servicesPanel.classList.contains('open') ? closeServicesDropdown() : openServicesDropdown();
+  }
+
+  function openCoachingDropdown() {
+    coachingPanel.classList.add('open');
+    coachingBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeCoachingDropdown() {
+    coachingPanel.classList.remove('open');
+    coachingBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleCoachingDropdown() {
+    coachingPanel.classList.contains('open') ? closeCoachingDropdown() : openCoachingDropdown();
   }
 
   // ── hamburger ─────────────────────────────────────────────────────────────
@@ -119,43 +164,84 @@ const services = [
   backdrop.addEventListener('click', closeMenu);
 
   // ── services dropdown ─────────────────────────────────────────────────────
-  servicesBtn.addEventListener('click', toggleDropdown);
+  servicesBtn.addEventListener('click', toggleServicesDropdown);
 
   // Hover behaviour (desktop): open on mouseenter, close on mouseleave with delay
-  const dropdownWrapper = document.getElementById('services-dropdown') as HTMLElement;
-  let closeTimeout: number | null = null;
+  const servicesDropdownWrapper = document.getElementById('services-dropdown') as HTMLElement;
+  let servicesCloseTimeout: number | null = null;
 
-  dropdownWrapper.addEventListener('mouseenter', () => {
+  servicesDropdownWrapper.addEventListener('mouseenter', () => {
     if (window.innerWidth >= 768) {
-      if (closeTimeout) clearTimeout(closeTimeout);
-      openDropdown();
+      if (servicesCloseTimeout) clearTimeout(servicesCloseTimeout);
+      openServicesDropdown();
     }
   });
 
-  dropdownWrapper.addEventListener('mouseleave', () => {
+  servicesDropdownWrapper.addEventListener('mouseleave', () => {
     if (window.innerWidth >= 768) {
-      closeTimeout = window.setTimeout(() => closeDropdown(), 300);
+      servicesCloseTimeout = window.setTimeout(() => closeServicesDropdown(), 300);
     }
   });
 
   // Also handle mouse enter/leave on the panel itself
   servicesPanel.addEventListener('mouseenter', () => {
     if (window.innerWidth >= 768) {
-      if (closeTimeout) clearTimeout(closeTimeout);
-      openDropdown();
+      if (servicesCloseTimeout) clearTimeout(servicesCloseTimeout);
+      openServicesDropdown();
     }
   });
 
   servicesPanel.addEventListener('mouseleave', () => {
     if (window.innerWidth >= 768) {
-      closeTimeout = window.setTimeout(() => closeDropdown(), 300);
+      servicesCloseTimeout = window.setTimeout(() => closeServicesDropdown(), 300);
     }
   });
 
   // Close dropdown when clicking outside
   document.addEventListener('click', (e: MouseEvent) => {
-    if (!dropdownWrapper.contains(e.target as Node) && !servicesPanel.contains(e.target as Node)) {
-      closeDropdown();
+    if (!servicesDropdownWrapper.contains(e.target as Node) && !servicesPanel.contains(e.target as Node)) {
+      closeServicesDropdown();
+    }
+  });
+
+  // ── coaching dropdown ─────────────────────────────────────────────────────
+  coachingBtn.addEventListener('click', toggleCoachingDropdown);
+
+  // Hover behaviour (desktop): open on mouseenter, close on mouseleave with delay
+  const coachingDropdownWrapper = document.getElementById('coaching-dropdown') as HTMLElement;
+  let coachingCloseTimeout: number | null = null;
+
+  coachingDropdownWrapper.addEventListener('mouseenter', () => {
+    if (window.innerWidth >= 768) {
+      if (coachingCloseTimeout) clearTimeout(coachingCloseTimeout);
+      openCoachingDropdown();
+    }
+  });
+
+  coachingDropdownWrapper.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 768) {
+      coachingCloseTimeout = window.setTimeout(() => closeCoachingDropdown(), 300);
+    }
+  });
+
+  // Also handle mouse enter/leave on the panel itself
+  coachingPanel.addEventListener('mouseenter', () => {
+    if (window.innerWidth >= 768) {
+      if (coachingCloseTimeout) clearTimeout(coachingCloseTimeout);
+      openCoachingDropdown();
+    }
+  });
+
+  coachingPanel.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 768) {
+      coachingCloseTimeout = window.setTimeout(() => closeCoachingDropdown(), 300);
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e: MouseEvent) => {
+    if (!coachingDropdownWrapper.contains(e.target as Node) && !coachingPanel.contains(e.target as Node)) {
+      closeCoachingDropdown();
     }
   });
 
