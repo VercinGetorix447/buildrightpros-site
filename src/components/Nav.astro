@@ -1,17 +1,17 @@
 ---
 const services = [
-  { label: 'Reputation Management',     desc: 'Google reviews, branding & CRM tracking',        href: '/services/reputation-management' },
-  { label: 'AI Receptionist & Bots',    desc: 'Voice agents, website bots & live booking',      href: '/ai-reception' },
-  { label: 'Lead Generation',           desc: 'Qualified lead management & outreach',           href: '/services/lead-generation' },
-  { label: 'Websites & Landing Pages',  desc: 'Full website builds & converting landing pages', href: '/services/websites' },
-  { label: 'Website Chat Widget',       desc: 'FAQ-trained bot with lead capture & SMS alerts', href: '/services/chat-widget' },
-  { label: 'Social Media',              desc: 'Easy integration & engagement management',       href: '/services/social-media' },
-  { label: 'SEO & Keyword Reports',     desc: 'AI search advantage with keyword tracking',      href: '/services/seo' },
-  { label: 'Expense OCR Automation',    desc: 'Upload receipts, auto-extract data instantly',   href: '/services/expense-ocr' },
-  { label: 'Sales & Ops Training',      desc: 'LMS courses and team training programs',         href: '/services/training' },
-  { label: 'Funnel Management',         desc: 'CRM & funnel boards to track every client',      href: '/services/crm' },
-  { label: 'Sales & Ops Coaching',      desc: '1-on-1 coaching to scale your business',         href: '/sales-ops-coaching' },
-  { label: 'Custom Solutions',          desc: 'Need help? Let\'s find the right solution',      href: '/#contact' },
+  { label: 'AI Reception & Bookings',        desc: 'Voice agents, live booking & call handling',       href: '/ai-reception' },
+  { label: 'Reviews & Reputation Management', desc: 'Google reviews, reputation & brand management',   href: '/services/reputation-management' },
+  { label: 'Lead Generation',                desc: 'Qualified lead management & outreach',            href: '/services/lead-generation' },
+  { label: 'Websites & Landing Pages',       desc: 'Full website builds & converting landing pages',  href: '/services/websites' },
+  { label: 'Site Bots & FAQs',               desc: 'FAQ-trained bot with lead capture & support',     href: '/services/site-bots' },
+  { label: 'Social Media Management',        desc: 'Content creation & engagement management',        href: '/services/social-media' },
+  { label: 'SEO & Keyword Reports',          desc: 'AI search advantage with keyword tracking',       href: '/services/seo' },
+  { label: 'CRM & Funnels',                  desc: 'Client tracking & sales funnel management',       href: '/services/crm' },
+  { label: 'Expense Capture',                desc: 'Upload receipts, auto-extract data instantly',    href: '/services/expense-capture' },
+  { label: 'Sales Coaching',                 desc: 'Sales training & business growth coaching',       href: '/services/sales-coaching' },
+  { label: 'Financial Coaching',             desc: 'Financial planning & business finance guidance',  href: '/services/financial-coaching' },
+  { label: 'Custom Solutions',               desc: 'Need help? Let\'s find the right solution',       href: '/#contact' },
 ];
 ---
 
@@ -164,9 +164,9 @@ const services = [
     justify-content: space-between;
     padding: 0 2rem;
     height: 64px;
-    background: var(--dark);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
@@ -174,7 +174,7 @@ const services = [
   .nav-logo {
     font-family: 'Titan One', cursive;
     font-size: 1.4rem;
-    color: var(--nav-text, #ffffff);
+    color: #1a56db;
     text-decoration: none;
     letter-spacing: -0.02em;
     flex-shrink: 0;
@@ -188,7 +188,7 @@ const services = [
   }
 
   .nav-link {
-    color: var(--nav-text, #ffffff);
+    color: #374151;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -199,7 +199,7 @@ const services = [
   }
 
   .nav-link:hover {
-    color: var(--accent);
+    color: #1a56db;
   }
 
   /* ── Services dropdown trigger ──────────────────────────────────────── */
@@ -215,7 +215,7 @@ const services = [
     border: none;
     padding: 0;
     cursor: pointer;
-    color: var(--nav-text, #ffffff);
+    color: #374151;
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -226,7 +226,7 @@ const services = [
   }
 
   .nav-dropdown-trigger:hover {
-    color: var(--accent);
+    color: #1a56db;
   }
 
   .chevron {

@@ -1,4 +1,6 @@
 ---
+import Nav from '../components/Nav.astro';
+
 interface Props {
   title: string;
 }
@@ -15,22 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-bglight font-body text-gray-800">
-    <!-- Sticky Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#hero" class="text-2xl font-heading font-bold text-primary">BuildRightPros</a>
-        <!-- NAV MENU - data-nav for easy reference (ALL CAPS) -->
-        <div class="hidden md:flex space-x-6 uppercase font-semibold text-sm tracking-wide">
-          <a href="#services" data-nav="1" class="hover:text-primary transition">WEBSITES</a>
-          <a href="#leads" data-nav="2" class="hover:text-primary transition">LEADS</a>
-          <a href="#callers" data-nav="3" class="hover:text-primary transition">CALLERS</a>
-          <a href="#pricing" data-nav="4" class="hover:text-primary transition">PRICING</a>
-          <a href="#contact" data-nav="5" class="hover:text-primary transition">CONTACT</a>
-          <a href="/blog" data-nav="6" class="hover:text-primary transition">BLOG</a>
-        </div>
-        <a href="#contact" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">Get Started</a>
-      </div>
-    </nav>
+    <Nav />
 
     <main class="pt-20">
       <slot />
