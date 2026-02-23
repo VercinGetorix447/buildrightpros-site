@@ -4,7 +4,7 @@ const services = [
   { label: 'Reviews & Reputation Management', desc: 'Google reviews, reputation & brand management',   href: '/services/reputation-management' },
   { label: 'Lead Generation',                desc: 'Qualified lead management & outreach',            href: '/services/lead-generation' },
   { label: 'Websites & Landing Pages',       desc: 'Full website builds & converting landing pages',  href: '/services/websites' },
-  { label: 'Site Bots & FAQs',               desc: 'FAQ-trained bot with lead capture & support',     href: '/services/site-bots' },
+  { label: 'Email & SMS Marketing',          desc: 'Automated campaigns & customer engagement',       href: '/services/email-sms-marketing' },
   { label: 'Social Media Management',        desc: 'Content creation & engagement management',        href: '/services/social-media' },
   { label: 'SEO & Keyword Reports',          desc: 'AI search advantage with keyword tracking',       href: '/services/seo' },
   { label: 'CRM & Funnels',                  desc: 'Client tracking & sales funnel management',       href: '/services/crm' },
@@ -194,12 +194,14 @@ const services = [
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
     white-space: nowrap;
+    display: inline-block;
   }
 
   .nav-link:hover {
     color: #1a56db;
+    transform: scale(1.2);
   }
 
   /* ── Services dropdown trigger ──────────────────────────────────────── */
@@ -221,12 +223,13 @@ const services = [
     text-transform: uppercase;
     letter-spacing: 0.04em;
     font-family: inherit;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
     white-space: nowrap;
   }
 
   .nav-dropdown-trigger:hover {
     color: #1a56db;
+    transform: scale(1.2);
   }
 
   .chevron {
