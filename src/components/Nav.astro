@@ -247,7 +247,7 @@ const services = [
   .dropdown-panel {
     display: none;
     position: absolute;
-    top: calc(100% + 12px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     min-width: 780px;
@@ -256,6 +256,8 @@ const services = [
     border-radius: 12px;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
     padding: 1rem;
+    padding-top: 1.5rem;
+    margin-top: 8px;
     z-index: 300;
   }
 
@@ -263,10 +265,10 @@ const services = [
   .dropdown-panel::before {
     content: '';
     position: absolute;
-    top: -12px;
+    top: -8px;
     left: 0;
     right: 0;
-    height: 12px;
+    height: 8px;
     background: transparent;
   }
 
