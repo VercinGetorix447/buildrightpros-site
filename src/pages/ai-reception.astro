@@ -8,7 +8,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   <!-- ============================================
        HERO SECTION
        ============================================ -->
-  <section class="hero-section bg-gradient-to-br from-brand-light to-brand-muted">
+  <section class="hero-section bg-gradient-to-br from-bglight to-gray-100">
     <div class="hero-inner">
       <div class="hero-content">
         <h1 class="hero-title">Never Miss a Customer Call Again</h1>
@@ -23,7 +23,23 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
         </div>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=400&fit=crop" alt="AI receptionist answering calls" />
+        <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=600&h=400&fit=crop" alt="Professional receptionist answering customer calls" />
+      </div>
+    </div>
+
+    <!-- Three Statistics Boxes -->
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="stat-number">47%</div>
+        <div class="stat-label">Of calls go unanswered during business hours</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">$2,500+</div>
+        <div class="stat-label">Lost revenue per missed call on average</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">8+ hrs/week</div>
+        <div class="stat-label">Wasted on phone tag and callbacks</div>
       </div>
     </div>
   </section>
@@ -195,6 +211,75 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   </section>
 
   <!-- ============================================
+       INTEGRATIONS SECTION
+       ============================================ -->
+  <section id="integrations" class="section-block bg-white">
+    <div class="section-inner">
+      <h2 class="section-heading text-center mb-4">Seamless Integrations</h2>
+      <p class="text-center text-lg mb-12 text-gray-600">Works with the tools you already use</p>
+
+      <div class="integrations-grid">
+        <div class="integration-card">
+          <div class="integration-logo">
+            <svg class="w-20 h-20" viewBox="0 0 60 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 01-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.25c0-1.85-1.07-2.58-2.08-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.12.87V5.57h3.76l.08 1.02a4.7 4.7 0 013.23-1.29c2.9 0 5.62 2.6 5.62 7.4 0 5.23-2.7 7.6-5.65 7.6zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.57h4.13v14.44h-4.13V5.57zm0-4.7L32.37 0v3.36l-4.13.88V.88zm-4.32 9.35v9.79H19.8V5.57h3.7l.12 1.22c1-1.77 3.07-1.41 3.62-1.22v3.79c-.52-.17-2.29-.43-3.32.86zm-8.55 4.72c0 2.43 2.6 1.68 3.12 1.46v3.36c-.55.3-1.54.54-2.89.54a4.15 4.15 0 01-4.27-4.24l.01-13.17 4.02-.86v3.54h3.14V9.1h-3.13v5.85zm-4.91.7c0 2.97-2.31 4.66-5.73 4.66a11.2 11.2 0 01-4.46-.93v-3.93c1.38.75 3.1 1.31 4.46 1.31.92 0 1.53-.24 1.53-1C6.26 13.77 0 14.51 0 9.95 0 7.04 2.28 5.3 5.62 5.3c1.36 0 2.72.2 4.09.75v3.88a9.23 9.23 0 00-4.1-1.06c-.86 0-1.44.25-1.44.93 0 1.85 6.29.97 6.29 5.88z" fill="#635BFF"/>
+            </svg>
+          </div>
+          <h3 class="integration-title">Stripe Payment Processing</h3>
+          <p class="integration-description">Secure payment processing with instant signup and activation. Accept payments seamlessly.</p>
+          <ul class="integration-features">
+            <li>Instant merchant account setup</li>
+            <li>PCI-compliant security</li>
+            <li>Accept all major payment methods</li>
+          </ul>
+        </div>
+
+        <div class="integration-card">
+          <div class="integration-logo">
+            <svg class="w-20 h-20" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="24" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#292929">Cal.com</text>
+            </svg>
+          </div>
+          <h3 class="integration-title">Cal.com Scheduling</h3>
+          <p class="integration-description">Automated appointment booking that syncs with your calendar in real-time.</p>
+          <ul class="integration-features">
+            <li>Real-time calendar sync</li>
+            <li>Automatic confirmation emails</li>
+            <li>Smart availability management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DEMO VOICE SECTION
+       ============================================ -->
+  <section id="voice-demo" class="section-block bg-bglight">
+    <div class="section-inner max-w-3xl mx-auto">
+      <h2 class="section-heading text-center mb-4">Hear Your AI Receptionist in Action</h2>
+      <p class="text-center text-lg mb-8 text-gray-600">Listen to how naturally our AI handles customer inquiries</p>
+
+      <div class="voice-demo-container">
+        <div class="voice-equalizer">
+          <div class="equalizer-bar"></div>
+          <div class="equalizer-bar"></div>
+          <div class="equalizer-bar"></div>
+          <div class="equalizer-bar"></div>
+          <div class="equalizer-bar"></div>
+        </div>
+
+        <audio id="demo-audio" controls class="audio-player">
+          <source src="/audio/ai-reception-demo.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p class="demo-description">Sample call showing how BuildRightPros AI handles customer inquiries, books appointments, and captures lead information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        SIGNUP FORM SECTION
        ============================================ -->
   <section id="signup-form" class="section-block bg-white">
@@ -286,7 +371,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   }
 
   .btn-primary {
-    background: var(--accent);
+    background: #1e40af;
     color: white;
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -294,29 +379,29 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
     font-size: 1.125rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
   }
 
   .btn-primary:hover {
-    background: var(--accent-hover);
+    background: #1e3a8a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(var(--accent-rgb), 0.4);
+    box-shadow: 0 6px 16px rgba(30, 64, 175, 0.4);
   }
 
   .btn-secondary {
     background: white;
-    color: var(--accent);
+    color: #1e40af;
     padding: 1rem 2rem;
     border-radius: 8px;
     font-weight: 700;
     font-size: 1.125rem;
     text-decoration: none;
-    border: 2px solid var(--accent);
+    border: 2px solid #1e40af;
     transition: all 0.3s ease;
   }
 
   .btn-secondary:hover {
-    background: var(--accent);
+    background: #1e40af;
     color: white;
   }
 
@@ -338,6 +423,43 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   }
 
+  /* ===== HERO STATISTICS BOXES ===== */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+  }
+
+  .stat-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #1e40af;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(30, 64, 175, 0.2);
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.4;
+  }
+
   /* ===== FEATURES SECTION ===== */
   .feature-grid {
     display: grid;
@@ -354,15 +476,15 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   }
 
   .feature-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.15);
+    border-color: #1e40af;
+    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.15);
     transform: translateY(-4px);
   }
 
   .feature-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    background: linear-gradient(135deg, #1e40af, #1e3a8a);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -400,7 +522,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--accent);
+    color: #1e40af;
     font-weight: 700;
   }
 
@@ -413,12 +535,12 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
 
   .pricing-card {
     background: white;
-    border: 3px solid var(--accent);
+    border: 3px solid #1e40af;
     border-radius: 16px;
     padding: 3rem;
     max-width: 480px;
     position: relative;
-    box-shadow: 0 12px 40px rgba(var(--accent-rgb), 0.2);
+    box-shadow: 0 12px 40px rgba(30, 64, 175, 0.2);
   }
 
   .pricing-badge {
@@ -426,7 +548,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
     top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--accent);
+    background: #1e40af;
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
@@ -450,7 +572,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   .price {
     font-size: 4rem;
     font-weight: 900;
-    color: var(--accent);
+    color: #1e40af;
   }
 
   .period {
@@ -500,7 +622,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   .btn-pricing {
     display: block;
     width: 100%;
-    background: var(--accent);
+    background: #1e40af;
     color: white;
     padding: 1.25rem;
     border-radius: 8px;
@@ -512,9 +634,9 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   }
 
   .btn-pricing:hover {
-    background: var(--accent-hover);
+    background: #1e3a8a;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
   }
 
   .pricing-guarantee {
@@ -608,12 +730,12 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   .form-group input:focus,
   .form-group select:focus {
     outline: none;
-    border-color: var(--accent);
+    border-color: #1e40af;
   }
 
   .btn-submit {
     width: 100%;
-    background: var(--accent);
+    background: #1e40af;
     color: white;
     padding: 1rem;
     border: none;
@@ -626,7 +748,7 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
   }
 
   .btn-submit:hover {
-    background: var(--accent-hover);
+    background: #1e3a8a;
     transform: translateY(-2px);
   }
 
@@ -634,6 +756,138 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
     text-align: center;
     color: var(--text);
     font-size: 0.875rem;
+  }
+
+  /* ===== INTEGRATIONS SECTION ===== */
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .integration-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .integration-card:hover {
+    border-color: #1e40af;
+    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .integration-logo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+  }
+
+  .integration-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .integration-description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .integration-features {
+    list-style: none;
+    padding: 0;
+  }
+
+  .integration-features li {
+    color: #374151;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .integration-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1e40af;
+    font-weight: 700;
+  }
+
+  /* ===== VOICE DEMO SECTION ===== */
+  .voice-demo-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .voice-equalizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 80px;
+    margin-bottom: 2rem;
+  }
+
+  .equalizer-bar {
+    width: 12px;
+    background: linear-gradient(to top, #1e40af, #60a5fa);
+    border-radius: 6px;
+    animation: pulse 0.8s ease-in-out infinite;
+  }
+
+  .equalizer-bar:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .equalizer-bar:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .equalizer-bar:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .equalizer-bar:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  .equalizer-bar:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      height: 20%;
+    }
+    50% {
+      height: 100%;
+    }
+  }
+
+  .audio-player {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .demo-description {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   /* ===== SECTION UTILITIES ===== */
@@ -671,8 +925,22 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
       flex-direction: column;
     }
 
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+    }
+
     .feature-grid,
     .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .integrations-grid {
       grid-template-columns: 1fr;
     }
 
@@ -682,6 +950,14 @@ import CallHandlingPainPoints from '../components/CallHandlingPainPoints.astro';
 
     .section-heading {
       font-size: 1.875rem;
+    }
+
+    .voice-demo-container {
+      padding: 2rem;
+    }
+
+    .voice-equalizer {
+      height: 60px;
     }
   }
 </style>
