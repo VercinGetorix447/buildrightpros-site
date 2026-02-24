@@ -188,6 +188,57 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ============================================
+       SECTION 5.5: ONBOARDING PROCESS
+       - Simple 3-step timeline showing how to get started
+       ============================================ -->
+  <section class="py-20 bg-gradient-to-br from-blue-50 to-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+        Get Started in <span class="text-blue-600">3 Simple Steps</span>
+      </h2>
+      <p class="text-xl text-center text-gray-600 mb-12">
+        From first call to live service in under 48 hours
+      </p>
+
+      <!-- Animated Timeline -->
+      <div class="relative onboarding-timeline">
+        <!-- Connecting line (animated) -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 to-orange-500 timeline-line"></div>
+
+        <!-- Step 1 -->
+        <div class="relative flex items-center mb-12 timeline-step" data-step="1">
+          <div class="flex-1 text-right pr-8">
+            <h3 class="text-2xl font-bold text-gray-900">Discovery Call</h3>
+            <p class="text-gray-600">15-minute conversation to understand your business needs</p>
+          </div>
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold z-10 shadow-lg">1</div>
+          <div class="flex-1 pl-8 hidden md:block"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative flex items-center mb-12 timeline-step" data-step="2">
+          <div class="flex-1 pr-8 hidden md:block"></div>
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold z-10 shadow-lg">2</div>
+          <div class="flex-1 text-left pl-8">
+            <h3 class="text-2xl font-bold text-gray-900">Custom Setup</h3>
+            <p class="text-gray-600">We configure your AI receptionist, integrations, and workflows</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative flex items-center timeline-step" data-step="3">
+          <div class="flex-1 text-right pr-8">
+            <h3 class="text-2xl font-bold text-gray-900">Go Live</h3>
+            <p class="text-gray-600">Your AI receptionist starts answering calls and booking jobs</p>
+          </div>
+          <div class="flex-shrink-0 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl font-bold z-10 shadow-lg">✓</div>
+          <div class="flex-1 pl-8 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        SECTION 6: PRICING (4 Tiers)
        - 6.1 Section Title
        - 6.2 Subtitle
@@ -476,3 +527,63 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<style>
+  /* Onboarding Timeline Animation Styles */
+  .timeline-line {
+    animation: lineGrow 1.5s ease-out forwards;
+  }
+
+  @keyframes lineGrow {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+
+  .timeline-step {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .timeline-step[data-step="1"] {
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  }
+
+  .timeline-step[data-step="2"] {
+    animation: fadeInUp 0.6s ease-out 0.4s forwards;
+  }
+
+  .timeline-step[data-step="3"] {
+    animation: fadeInUp 0.6s ease-out 0.6s forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .timeline-step .flex-1:first-child {
+      padding-right: 0.5rem;
+      text-align: left;
+    }
+
+    .timeline-step h3 {
+      font-size: 1.25rem;
+    }
+
+    .timeline-step p {
+      font-size: 0.875rem;
+    }
+  }
+</style>
